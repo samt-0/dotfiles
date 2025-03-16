@@ -18,13 +18,11 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "cpu",
         "memory",
         "temperature",
         "backlight",
         "clock",
         "tray",
-        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -101,8 +99,10 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        format": "{:%a, %d. %b  %H:%M}",
+        "tooltip": false,
+	#"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        #"format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": "{usage}% ",
