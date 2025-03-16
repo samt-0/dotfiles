@@ -254,6 +254,11 @@ exec $term
 
 workspace 4
 exec lf
+
+workspace 10
+exec btop
+exec neofetch
+
 #
 # Status Bar:
 #
