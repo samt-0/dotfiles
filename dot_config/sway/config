@@ -98,7 +98,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Down exec brightnessctl s 10%-
 
 exec udiskie
-
+exec swaybg -m stretch -i /home/thas/wallpaper/wallpaper
 #
 # Moving around:
 #
