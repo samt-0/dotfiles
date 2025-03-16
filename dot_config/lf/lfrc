@@ -29,7 +29,8 @@ cmd DetachencryptedUSB ${{
 }}
 
 cmd setwallpaper ${{
-  mv "$f" wallpaper
+  cp "$f" /home/thas/wallpaper/
+  #mv "$f" wallpaper
 }}
 
 # Archive bindings
