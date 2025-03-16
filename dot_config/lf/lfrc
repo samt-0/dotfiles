@@ -29,7 +29,7 @@ cmd DetachencryptedUSB ${{
 }}
 
 cmd setwallpaper ${{
-    cp "$f" ~/.config/wall.png && feh --bg-scale --no-fehbg "$f"
+  swaybg -m stretch -i
 }}
 
 # Archive bindings
