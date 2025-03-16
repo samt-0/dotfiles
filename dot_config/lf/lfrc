@@ -63,6 +63,9 @@ cmd clear_trash %trash-empty
 cmd restore_trash ${{
   trash-restore
 }}
+cmd deletefromUSB ${{
+  rm -r
+}}
 
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
@@ -147,6 +150,7 @@ map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
+map dfUSB deletefromUSB
 
 # Movement
 map gc cd ~/.config
