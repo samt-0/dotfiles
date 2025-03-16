@@ -24,7 +24,7 @@ set $term ghostty
 # Your preferred application launcher
 set $menu wofi --show drun
 
-set $lock swaylock
+set $lock swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper
 
 ### Output configuration
 #
