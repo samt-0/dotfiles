@@ -7,7 +7,7 @@ datestr=%a, %e of %B
 
 screenshots
 
-fade-in=0.2
+fade-in=0
 
 effect-blur=20x2
 #effect-greyscale
@@ -40,7 +40,7 @@ line-caps-lock-color=009ddcFF
 line-ver-color=d9d8d8FF
 line-wrong-color=ee2e24FF
 
-text-clear-color=ffd20400
+text-clear-color=962a54
 text-ver-color=d9d8d800
 text-wrong-color=ee2e2400
 
