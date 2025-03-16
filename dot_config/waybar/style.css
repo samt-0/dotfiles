@@ -1,17 +1,22 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    border-radius: 4px;
+  font-family: Iosevka;
+  font-size: 12pt;
+  color: white;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.9);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background: #1b182c;
+    opacity: 0.85;
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 0;
+    border-radius: 0;*/
 }
 
 window#waybar.hidden {
@@ -55,20 +60,20 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces button {
+/*#workspaces button {
     padding: 0 0.4em;
     background-color: transparent;
     color: #ffffff;
-}
+}*/
 
-#workspaces button:hover {
+/*#workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-}
+}*/
 
-#workspaces button.focused {
+/*#workspaces button.focused {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-}
+}*/
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
@@ -96,15 +101,15 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 10px;
+    padding: 1rem 1rem;
     color: #333333;
     margin: 2px 2px;
 }
 
 #window,
-#workspaces {
+/*#workspaces {
     margin: 0 4px;
-}
+}*/
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -327,4 +332,19 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#workspaces {
+  background: #962a54;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 1rem 1rem 0;
+}
+#workspaces button {
+  background: transparent;
+}
+
+#workspaces button.focused {
+  background: #7a2043;
+  border-radius: 1rem;
 }
