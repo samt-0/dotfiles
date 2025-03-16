@@ -49,7 +49,7 @@ macos-icon = xray
 
 font-family = "FiraMono Nerd Font"
 font-thicken = true
-font-size = 20
+font-size = 16
 
 mouse-hide-while-typing = true
 
