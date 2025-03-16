@@ -30,7 +30,8 @@ cmd DetachencryptedUSB ${{
 
 cmd setwallpaper ${{
   trash-put /home/thas/wallpaper/wallpaper
-  #cp "$f" /home/thas/wallpaper/
+  cp "$f" /home/thas/wallpaper/
+  mv /home/thas/wallpaper/* /home/thas/wallpaper/wallpaper
 }}
 
 # Archive bindings
