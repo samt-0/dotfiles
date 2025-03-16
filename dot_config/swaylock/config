@@ -40,6 +40,7 @@ line-caps-lock-color=009ddcFF
 line-ver-color=d9d8d8FF
 line-wrong-color=ee2e24FF
 
+text-color=ffffff
 text-clear-color=ffd20400
 text-ver-color=d9d8d800
 text-wrong-color=ee2e2400
