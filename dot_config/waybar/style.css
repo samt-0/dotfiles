@@ -19,15 +19,15 @@ window#waybar {
 #disk,
 #pulseaudio,
 #custom-weather,
-#cpu {
+#cpu,
+#temperature,
+#battery,
+#backlight,
+#clock {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-#custom-weather {
-  padding-left: 2rem;
-  font-weight: bold;
-}
 
 #workspaces {
   background: #962a54;
