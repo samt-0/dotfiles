@@ -29,7 +29,7 @@ cmd DetachencryptedUSB ${{
 }}
 
 cmd setwallpaper ${{
-  swaybg -m stretch -i "$f"
+  mv "$f" wallpaper
 }}
 
 # Archive bindings
