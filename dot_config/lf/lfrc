@@ -29,7 +29,7 @@ cmd DetachencryptedUSB ${{
 }}
 
 cmd setwallpaper ${{
-  rm -f /home/thas/wallpaper/*
+  trash-put /home/thas/wallpaper/wallpaper
   #cp "$f" /home/thas/wallpaper/
 }}
 
