@@ -18,12 +18,12 @@ indicator-radius=240
 indicator-thickness=20
 indicator-caps-lock
 
-key-hl-color=880033
+key-hl-color=962a54
 
 separator-color=00000000
 
 inside-color=00000099
-inside-clear-color=ffd20400
+inside-clear-color=962a54
 inside-caps-lock-color=009ddc00
 inside-ver-color=d9d8d800
 inside-wrong-color=ee2e2400
