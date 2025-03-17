@@ -88,7 +88,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec sway exit
+    bindsym $mod+Shift+i exec sway exit
 
     bindsym $mod+i exec $lock
     bindsym $mod+Shift+p exec shutdown now
