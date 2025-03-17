@@ -14,3 +14,4 @@ export EDITOR="/usr/bin/nano"
 source /home/thas/.config/broot/launcher/bash/br
 
 export EDITOR=nano
+alias cz=chezmoi
