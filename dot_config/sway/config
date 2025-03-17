@@ -246,18 +246,8 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 output * background '~/wallpaper/wallpaper' fill
 
-workspace 2
-exec firefox
-
 workspace 3
 exec $term
-
-workspace 4
-exec lf
-
-workspace 10
-exec btop
-exec neofetch
 
 #
 # Status Bar:
