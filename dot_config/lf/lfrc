@@ -33,6 +33,7 @@ cmd setwallpaper ${{
   cp "$f" /home/thas/wallpaper/
   mv /home/thas/wallpaper/* /home/thas/wallpaper/wallpaper
   sudo cp /home/thas/wallpaper/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/
+  sudo mv /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/david-clode-seM6i8gJ7d0-unsplash.jpg
 }}
 
 # Archive bindings
