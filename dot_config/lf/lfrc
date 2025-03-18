@@ -32,7 +32,7 @@ cmd setwallpaper ${{
   trash-put /home/thas/wallpaper/wallpaper
   cp "$f" /home/thas/wallpaper/
   mv /home/thas/wallpaper/* /home/thas/wallpaper/wallpaper
-#  swaybg -m stretch -i /home/thas/wallpaper/wallpaper
+  sudo cp /home/thas/wallpaper/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/
 }}
 
 # Archive bindings
