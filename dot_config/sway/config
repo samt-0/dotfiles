@@ -246,9 +246,6 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 output * background '~/wallpaper/wallpaper' fill
 
-workspace 3
-exec $term
-
 #
 # Status Bar:
 #
@@ -258,5 +255,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
-# exec swaybg -m stretch -i /home/thas/wallpaper/wallpaper
 
