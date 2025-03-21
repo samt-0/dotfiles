@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Syncthing
-Comment=Launches Syncthing Web GUI
+Comment=Launches Syncthing web GUI
 Icon=utilities-terminal
 Terminal=false
 Exec=firefox https://localhost:8384
