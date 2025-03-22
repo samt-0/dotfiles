@@ -91,7 +91,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+i exec sway exit
 
     bindsym $mod+i exec $lock
-    bindsym $mod+Shift+p exec shutdown now
+    bindsym $mod+Shift+p exec shutdown
     
     # Brightness
     bindsym $mod+Up exec brightnessctl s +5%
