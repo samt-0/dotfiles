@@ -154,7 +154,7 @@ exec udiskie
 assign [app_id="firefox"] 2
 assign [app_id="obsidian"] 4
 #assign [app_id="ghostty"] 3
-assign [instance="btop++"] 9
+assign [con_id="btop"] 9
 #
 # Layout stuff:
 #
