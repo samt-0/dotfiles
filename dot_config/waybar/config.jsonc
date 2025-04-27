@@ -23,7 +23,7 @@
         "clock",
         "tray",
     ],
-    // Modules configuration
+    // Modules configurations
     // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
