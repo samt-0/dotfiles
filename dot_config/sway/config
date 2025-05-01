@@ -250,7 +250,7 @@ client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
-output * background '~/wallpaper/wallpaper' fill
+output * background '~/wallpapers/wallpaper/wallpaper' fill
 
 #
 # Status Bar:
