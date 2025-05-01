@@ -1,7 +1,8 @@
+@import '/home/thas/.cache/wal/colors-waybar.css';
 * {
   font-family: Iosevka;
   font-size: 12pt;
-  color: white;
+  color: @cursor;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -10,7 +11,7 @@
 }
 
 window#waybar {
-  background: #1b182c;
+  background: @background;
   opacity: 0.85;
 }
 
@@ -30,8 +31,8 @@ window#waybar {
 
 
 #workspaces {
-  background: #962a54;
-  color: white;
+  background: @background;
+  color: @cursor;
   font-weight: bold;
   border-radius: 1rem 1rem 1rem 1rem;
 }
@@ -40,6 +41,6 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background: #7a2043;
+  background: @color8;
   border-radius: 1rem;
 }
