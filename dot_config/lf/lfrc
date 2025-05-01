@@ -29,9 +29,9 @@ cmd DetachencryptedUSB ${{
 }}
 
 cmd setwallpaper ${{
-  trash-put /home/thas/wallpaper/wallpaper
-  cp "$f" /home/thas/wallpaper/
-  mv /home/thas/wallpaper/* /home/thas/wallpaper/wallpaper
+  trash-put /home/thas/wallpapers/wallpaper/wallpaper
+  cp "$f" /home/thas/wallpapers/wallpaper/
+  mv /home/thas/wallpapers/wallpaper/* /home/thas/wallpapers/wallpaper/wallpaper
   sudo cp /home/thas/wallpaper/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/
   sudo mv /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/david-clode-seM6i8gJ7d0-unsplash.jpg
 }}
