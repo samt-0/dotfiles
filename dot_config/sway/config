@@ -240,10 +240,10 @@ font pango: Iosevka 9
 
 default_border pixel 2
 
-set $cl_high $foreground
-set $cl_indi $foreground
+set $cl_high $color14
+set $cl_indi $color14
 set $cl_back $background
-set $cl_fore $foreground
+set $cl_fore $color14
 set $cl_urge #ee2e24
 
 client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
