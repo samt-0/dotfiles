@@ -147,7 +147,7 @@ map <enter> open
 map R reload
 map mf mkfile
 map md mkdir
-map bg wp setwallpaper
+map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
