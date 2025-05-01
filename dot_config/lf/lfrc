@@ -32,7 +32,7 @@ cmd setwallpaper ${{
   trash-put /home/thas/wallpapers/wallpaper/wallpaper
   cp "$f" /home/thas/wallpapers/wallpaper/
   mv /home/thas/wallpapers/wallpaper/* /home/thas/wallpapers/wallpaper/wallpaper
-  sudo cp /home/thas/wallpaper/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/
+  sudo cp /home/thas/wallpapers/wallpaper/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/
   sudo mv /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/wallpaper /usr/share/sddm/themes/eucalyptus-drop/Backgrounds/david-clode-seM6i8gJ7d0-unsplash.jpg
 }}
 
@@ -163,4 +163,4 @@ map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 map gu cd /run/media/thas
 map gv cd /mnt
-map gw cd ~/wallpaper
+map gw cd ~/wallpapers
