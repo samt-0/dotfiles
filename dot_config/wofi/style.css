@@ -1,3 +1,5 @@
+@import “/home/thas/.cache/wal/colors-waybar.css”;
+
 * {
   font-family: Iosevka;
   border-color: transparent;
@@ -6,16 +8,16 @@
 
 window {
   border-radius: 1rem;
-  background: #1b182c;
-  color: white;
+  background: @background;
+  color: @cursor;
   padding: 1rem;
 }
 
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: #962a54;
-  color: white;
+  background: @background;
+  color: @cursor;
   font-size: 16pt;
   padding: 0.5rem;
   outline: none;
@@ -26,7 +28,7 @@ window {
 }
 
 #selected {
-  background: #a33962;
+  background: @color8;
   border-color: transparent;
   border: none;
   margin: 0;
