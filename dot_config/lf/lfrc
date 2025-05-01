@@ -163,3 +163,4 @@ map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 map gu cd /run/media/thas
 map gv cd /mnt
+map gw cd ~/wallpaper
