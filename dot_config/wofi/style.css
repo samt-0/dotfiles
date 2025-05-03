@@ -28,7 +28,7 @@ window {
 }
 
 #selected {
-  background: @color8;
+  background: --wofi-color8;
   border-color: transparent;
   border: none;
   margin: 0;
