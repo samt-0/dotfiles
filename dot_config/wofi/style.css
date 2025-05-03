@@ -8,6 +8,7 @@
 
 window {
   border-radius: 1rem;
+  opacity: 0.5;
   background: #c9c2ba50;
   color: @cursor;
   padding: 1rem;
