@@ -9,7 +9,7 @@
 window {
   border-radius: 1rem;
   background: rgb(--wofi-rgb-color0);
-  color: @cursor;
+  color: rgb(--wofi-rgb-color7);
   padding: 1rem;
 }
 
@@ -17,7 +17,7 @@ window {
   border-radius: 1rem;
   border-color: transparent;
   background: rgb(--wofi-rgb-color0);
-  color: @cursor;
+  color: rgb(--wofi-rgb-color7);
   font-size: 16pt;
   padding: 0.5rem;
   outline: none;
