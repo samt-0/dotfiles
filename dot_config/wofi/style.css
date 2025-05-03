@@ -49,12 +49,10 @@ window {
 #outer-box {
   background: transparent;
   padding: 1rem;
-  opacity: 0.5;
 }
 
 #inner-box {
   background: transparent;
-  opacity: 0.5;
 }
 
 #entry {
