@@ -4,12 +4,11 @@
   font-family: Iosevka;
   border-color: transparent;
   outline-style: none;
-  opacity: 0.5;
 }
 
 window {
   border-radius: 1rem;
-  background: @background;
+  background: rbga(0,0,0,0.5);
   color: @cursor;
   padding: 1rem;
 }
