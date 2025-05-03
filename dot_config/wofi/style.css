@@ -4,13 +4,13 @@
   font-family: Iosevka;
   border-color: transparent;
   outline-style: none;
+  opacity: 0.5;
 }
 
 window {
   border-radius: 1rem;
   background: #c9c2ba50;
   color: @cursor;
-  opacity: 0.5;
   padding: 1rem;
 }
 
