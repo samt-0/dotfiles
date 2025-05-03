@@ -8,16 +8,16 @@
 
 window {
   border-radius: 1rem;
-  background: @background;
-  color: @cursor;
+  background: rgba(var(@background), 0.5);
+  color: rgba(var(@cursor), 0.5);
   padding: 1rem;
 }
 
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: @background;
-  color: @cursor;
+  background: rgba(var(@background), 0.5);
+  color: rgba(var(@cursor), 0.5);
   font-size: 16pt;
   padding: 0.5rem;
   outline: none;
@@ -28,7 +28,7 @@ window {
 }
 
 #selected {
-  background: @color8;
+  background: rgba(var(@color8), 0.5);
   border-color: transparent;
   border: none;
   margin: 0;
