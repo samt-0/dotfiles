@@ -4,7 +4,6 @@
   font-family: Iosevka;
   border-color: transparent;
   outline-style: none;
-  opacity: 0.5;
 }
 
 window {
@@ -29,6 +28,7 @@ window {
 }
 
 #selected {
+  opacity: 0.5;
   background: @color8;
   border-color: transparent;
   border: none;
