@@ -28,7 +28,7 @@ window {
 }
 
 #selected {
-  background: --wofi-color3;
+  background: --wofi-color2;
   border-color: transparent;
   border: none;
   margin: 0;
@@ -37,7 +37,7 @@ window {
 }
 
 #entry:nth-child(even) {
-  background: rgba(--wofi-rgb-color8, 0.7);
+  background: rgba(--wofi-rgb-color8, 0.2);
   border-radius: 1rem;
 }
 
