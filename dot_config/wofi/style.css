@@ -8,7 +8,7 @@
 
 window {
   border-radius: 1rem;
-  background: rgba(var(@background), 0.5);
+  background: rgba(@background, 0.5);
   color: rgba(var(@cursor), 0.5);
   padding: 1rem;
 }
@@ -16,7 +16,7 @@ window {
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: rgba(var(@background), 0.5);
+  background: rgba(@background, 0.5);
   color: rgba(var(@cursor), 0.5);
   font-size: 16pt;
   padding: 0.5rem;
