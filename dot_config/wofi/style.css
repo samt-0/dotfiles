@@ -8,7 +8,7 @@
 
 window {
   border-radius: 1rem;
-  background: rgba(@background, 0.5);
+  background: rgba(#0a0e18, 0.5);
   color: @cursor;
   padding: 1rem;
 }
