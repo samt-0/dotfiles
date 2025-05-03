@@ -8,10 +8,9 @@
 
 window {
   border-radius: 1rem;
-  background: @background;
+  background: rgba(4, 5, 9, 0.5);
   color: @cursor;
   padding: 1rem;
-  opacity: 0.9;
 }
 
 #input {
