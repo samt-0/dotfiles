@@ -17,7 +17,7 @@ cmd mkdir ${{
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  nano $ans
+  vim $ans
 }}
 
 cmd DetachUsb ${{
