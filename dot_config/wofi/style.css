@@ -1,4 +1,4 @@
---import url("/home/thas/.cache/wal/colors.css");
+@import url("/home/thas/.cache/wal/colors-waybar.css");
 
 * {
   font-family: Iosevka;
@@ -8,16 +8,16 @@
 
 window {
   border-radius: 1rem;
-  background: --background;
-  color: --cursor;
+  background: @background;
+  color: @cursor;
   padding: 1rem;
 }
 
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: --background;
-  color: --cursor;
+  background: @background;
+  color: @cursor;
   font-size: 16pt;
   padding: 0.5rem;
   outline: none;
@@ -28,7 +28,7 @@ window {
 }
 
 #selected {
-  background: --color8;
+  background: @color8;
   border-color: transparent;
   border: none;
   margin: 0;
