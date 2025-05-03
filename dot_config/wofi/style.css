@@ -8,7 +8,7 @@
 
 window {
   border-radius: 1rem;
-  background: rgb(var(@background));
+  background: var(--background);
   color: @cursor;
   padding: 1rem;
 }
@@ -16,7 +16,7 @@ window {
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: rgb(var(@background));
+  background: var(--background);
   color: @cursor;
   font-size: 16pt;
   padding: 0.5rem;
