@@ -8,16 +8,16 @@
 
 window {
   border-radius: 1rem;
-  background: rgba(--wofi-rgb-color0, 0.5);
-  color: rgba(--wofi-rgb-color7);
+  background: rgba(--wofi-rgb-color0, 0.7);
+  color: rgb(--wofi-rgb-color7);
   padding: 1rem;
 }
 
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: rgba(--wofi-rgb-color0, 0.5);
-  color: rgba(--wofi-rgb-color7);
+  background: rgba(--wofi-rgb-color0, 0.7);
+  color: rgb(--wofi-rgb-color7);
   font-size: 16pt;
   padding: 0.5rem;
   outline: none;
