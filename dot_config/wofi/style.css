@@ -1,4 +1,4 @@
-@import '/home/thas/.cache/wal/colors-wofi.css';
+@import '/home/thas/.cache/wal/colors';
 
 * {
   font-family: Iosevka;
@@ -8,7 +8,7 @@
 
 window {
   border-radius: 1rem;
-  background: @background;
+  background: rgb(--wofi-rgb-color0);
   color: @cursor;
   padding: 1rem;
 }
@@ -16,7 +16,7 @@ window {
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: @background;
+  background: rgb(--wofi-rgb-color0);
   color: @cursor;
   font-size: 16pt;
   padding: 0.5rem;
