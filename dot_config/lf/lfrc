@@ -17,7 +17,7 @@ cmd mkdir ${{
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  vim $ans
+  nvim $ans
 }}
 
 cmd DetachUsb ${{
@@ -71,7 +71,7 @@ cmd restore_trash ${{
 
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
-		text/*) lf -remote "send $id \$vim \$fx";;
+		text/*) lf -remote "send $id \$nvim \$fx";;
 		*) xdg-open "$f"
 	esac
 }}
