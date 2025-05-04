@@ -11,8 +11,7 @@
 }
 
 window#waybar {
-  background: @background;
-  opacity: 0.5;
+  background: rgb(255, 255, 255);
 }
 
 #window,
