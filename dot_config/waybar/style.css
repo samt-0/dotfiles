@@ -12,6 +12,7 @@
 
 window#waybar {
   background: @background;
+  opacity: 0.5;
 }
 
 #window,
