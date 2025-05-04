@@ -8,6 +8,7 @@
   box-shadow: none;
   text-shadow: none;
   transition-duration: 0s;
+  opacity: 0.5;
 }
 
 window#waybar {
