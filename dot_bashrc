@@ -9,9 +9,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-export EDITOR="/usr/bin/nano"
+export EDITOR="/usr/bin/nvim"
 
 source /home/thas/.config/broot/launcher/bash/br
 
-export EDITOR=nano
+export EDITOR=nvim
 alias cz=chezmoi
