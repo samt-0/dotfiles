@@ -8,12 +8,11 @@
   box-shadow: none;
   text-shadow: none;
   transition-duration: 0s;
-  opacity: 0.8;
 }
 
 window#waybar {
   background: @background;
-  opacity: 0.85;
+  opacity: 0.55;
 }
 
 #window,
