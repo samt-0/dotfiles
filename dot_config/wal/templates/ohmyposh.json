@@ -127,6 +127,29 @@
         }}
       ],
       "type": "prompt"
+    }},
+    {{
+      "alignment": "right",
+      "segments": [
+        {{
+          "background": "#003543",
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " \ue641 {{{{ .CurrentDate | date .Format }}}} ",
+          "type": "time"
+	}},
+        {{
+          "background": "#83769c",
+          "foreground": "#ffffff",
+          "properties": {{
+            "always_enabled": true
+	  }},
+          "style": "plain",
+          "template": " \ueba2 {{{{ .FormattedMs }}}} ",
+          "type": "executiontime"
+	}}
+      ],
+      "type": "rprompt"
     }}
   ],
   "console_title_template": "{{{{ .Folder }}}}",
