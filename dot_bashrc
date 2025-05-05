@@ -15,4 +15,4 @@ source /home/thas/.config/broot/launcher/bash/br
 
 export EDITOR=nvim
 alias cz=chezmoi
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config ~/.cache/wal/ohmyposh)"
