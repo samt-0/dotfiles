@@ -158,7 +158,7 @@
           "type": "session"
         }}
       ],
-      "type": "rprompt"
+      "type": "prompt"
     }}
   ],
   "console_title_template": "{{{{ .Folder }}}}",
