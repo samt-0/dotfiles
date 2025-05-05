@@ -178,6 +178,13 @@
       ],
       "type": "prompt"
     }}
+    {{
+      "transient_prompt": {{
+        "background": "transparent",
+        "foreground": "#ffffff",
+        "template": "{{ .Shell }}> "
+      }}
+    }}
   ],
   "console_title_template": "{{{{ .Folder }}}}",
   "final_space": true,
