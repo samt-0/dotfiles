@@ -132,22 +132,31 @@
       "alignment": "right",
       "segments": [
         {{
-          "background": "#003543",
-          "foreground": "#ffffff",
+          "background": "{background}",
+          "foreground": "{foreground}",
           "style": "plain",
           "template": " \ue641 {{{{ .CurrentDate | date .Format }}}} ",
           "type": "time"
 	}},
         {{
-          "background": "#83769c",
-          "foreground": "#ffffff",
+          "background": "{color1}",
+          "foreground": "{foreground}",
           "properties": {{
             "always_enabled": true
 	  }},
           "style": "plain",
           "template": " \ueba2 {{{{ .FormattedMs }}}} ",
           "type": "executiontime"
-	}}
+	}},
+	{{
+          "background": "{color2}",
+          "foreground": "{foreground}",
+          "leading_diamond": "\ue0c5",
+          "trailing_diamond": "\ue0bc",
+          "style": "diamond",
+          "template": "  {{{{ .UserName }}}}<transparent> / </>{{{{ .HostName }}}} ",
+          "type": "session"
+        }}
       ],
       "type": "rprompt"
     }}
