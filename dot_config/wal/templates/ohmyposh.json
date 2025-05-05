@@ -157,6 +157,25 @@
 	}}
       ],
       "type": "prompt"
+    }},
+    {{
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+	{{
+          "foreground": "{foreground}",
+          "foreground_templates": [
+            "{{{{ if gt .Code 0 }}}}#ff0000{{{{ end }}}}"
+          ],
+          "properties": {{
+            "always_enabled": true
+          }},
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "status"
+        }}
+      ],
+      "type": "prompt"
     }}
   ],
   "console_title_template": "{{{{ .Folder }}}}",
