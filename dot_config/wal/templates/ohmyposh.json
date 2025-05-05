@@ -135,7 +135,7 @@
           "background": "{color2}",
           "foreground": "{foreground}",
           "style": "plain",
-          "template": "{{{{ .UserName }}}}",
+          "template": "  {{{{ .UserName }}}}  ",
           "type": "session"
         }},
         {{
