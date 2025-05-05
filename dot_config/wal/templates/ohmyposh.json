@@ -23,7 +23,7 @@
           "type": "path"
         }},
         {{
-          "background": "{background}",
+          "background": "{color2}",
           "background_templates": [
             "{{{{ if or (.Working.Changed) (.Staging.Changed) }}}}#FF9248{{{{ end }}}}",
             "{{{{ if and (gt .Ahead 0) (gt .Behind 0) }}}}#ff4500{{{{ end }}}}",
@@ -46,7 +46,7 @@
           "type": "git"
         }},
         {{
-          "background": "{background}",
+          "background": "{color3}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
@@ -57,7 +57,7 @@
           "type": "go"
         }},
         {{
-          "background": "{background}",
+          "background": "{color4}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
@@ -68,7 +68,7 @@
           "type": "julia"
         }},
         {{
-          "background": "{background}",
+          "background": "{color5}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
@@ -80,7 +80,7 @@
           "type": "python"
         }},
         {{
-          "background": "{background}",
+          "background": "{color6}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
@@ -92,7 +92,7 @@
           "type": "ruby"
         }},
         {{
-          "background": "{background}",
+          "background": "{color7}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
@@ -118,7 +118,7 @@
           "type": "aws"
         }},
         {{
-          "background": "{background}",
+          "background": "{color8}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
