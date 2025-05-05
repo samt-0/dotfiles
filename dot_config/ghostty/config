@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 term = xterm-256color
-theme = "~/.cache/wal/ghostty.conf"
+theme = "/home/thas/.cache/wal/ghostty.conf"
 
 macos-icon = xray
 
