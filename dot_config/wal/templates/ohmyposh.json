@@ -130,16 +130,25 @@
     }},
     {{
       "alignment": "right",
-      "segments": [
+      "segments": [	
+	{{
+          "background": "{color2}",
+          "foreground": "{foreground}",
+          "leading_diamond": "\ue0c5",
+          "trailing_diamond": "\ue0bc",
+          "style": "diamond",
+          "template": "  {{{{ .UserName }}}}<transparent>",
+          "type": "session"
+        }},
         {{
-          "background": "{background}",
+          "background": "{color1}",
           "foreground": "{foreground}",
           "style": "plain",
           "template": " \ue641 {{{{ .CurrentDate | date .Format }}}} ",
           "type": "time"
 	}},
         {{
-          "background": "{color1}",
+          "background": "{color0}",
           "foreground": "{foreground}",
           "properties": {{
             "always_enabled": true
@@ -147,16 +156,7 @@
           "style": "plain",
           "template": " \ueba2 {{{{ .FormattedMs }}}} ",
           "type": "executiontime"
-	}},
-	{{
-          "background": "{color2}",
-          "foreground": "{foreground}",
-          "leading_diamond": "\ue0c5",
-          "trailing_diamond": "\ue0bc",
-          "style": "diamond",
-          "template": "  {{{{ .UserName }}}}<transparent> / </>{{{{ .HostName }}}} ",
-          "type": "session"
-        }}
+	}}
       ],
       "type": "prompt"
     }}
