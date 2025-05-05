@@ -12,7 +12,7 @@
           "type": "os"
         }},
         {{
-          "background": "{background}",
+          "background": "{color1}",
           "foreground": "{foreground}",
           "powerline_symbol": "\ue0b0",
           "properties": {{
