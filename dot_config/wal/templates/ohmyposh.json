@@ -134,10 +134,8 @@
 	{{
           "background": "{color2}",
           "foreground": "{foreground}",
-          "leading_diamond": "\ue0c5",
-          "trailing_diamond": "\ue0bc",
-          "style": "diamond",
-          "template": "  {{{{ .UserName }}}}<transparent>",
+          "style": "plain",
+          "template": "{{{{ .UserName }}}}",
           "type": "session"
         }},
         {{
