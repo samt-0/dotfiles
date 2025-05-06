@@ -15,4 +15,5 @@ source /home/thas/.config/broot/launcher/bash/br
 
 export EDITOR=nvim
 alias cz=chezmoi
+alias code="nvim ~/documents/10-19_meins/11_freizeit/11.06_coding/vs_code_projects"
 eval "$(oh-my-posh init bash --config ~/.cache/wal/ohmyposh.json)"
