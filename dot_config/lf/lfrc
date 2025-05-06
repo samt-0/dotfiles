@@ -165,3 +165,4 @@ map gt cd ~/.local/share/Trash/files
 map gu cd /run/media/thas
 map gv cd /mnt
 map gw cd ~/wallpapers
+map gcode cd ~/documents/10-19_meins/11_freizeit/11.06_coding
