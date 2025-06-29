@@ -1,4 +1,4 @@
-# Default config for sway
+# Default config for sway test
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -31,6 +31,7 @@ set $lock swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * scale 0.8
 #
 # Example configuration:
 #
