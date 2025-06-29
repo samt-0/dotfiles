@@ -163,6 +163,6 @@ map gV cd ~/videos
 map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 map gu cd /run/media/thas
-map gv cd /mnt
+map gv cd /run/media
 map gw cd ~/wallpapers
 map gC cd ~/documents/10-19_meins/11_freizeit/11.06_coding
