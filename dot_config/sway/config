@@ -265,6 +265,3 @@ bar {
 include /etc/sway/config.d/*
 
 exec ghostty
-exec firefox
-exec lf
-exec obsidian
