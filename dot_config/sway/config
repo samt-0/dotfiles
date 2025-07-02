@@ -93,7 +93,7 @@ output * scale 0.8
     bindsym $mod+Shift+i exec sway exit
 
     bindsym $mod+i exec $lock
-    bindsym $mod+Shift+p exec shutdown
+    bindsym $mod+Shift+p exec shutdown -t 3
     
     # Brightness
     bindsym $mod+Up exec brightnessctl s +5%
