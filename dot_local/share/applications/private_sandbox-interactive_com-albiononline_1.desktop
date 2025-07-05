@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Value=1.0
+Type=Application
+Name=Albion Online
+GenericName=MMORPG
+Comment=Play Albion Online!
+Icon=/home/thas/games/albiononline/AlbionOnline.xpm
+Exec=env DRI_PRIME=1 /home/thas/games/albiononline/Albion-Online
+Categories=Game
+StartupWMClass=Albion-Online
+Path=/home/thas/games/albiononline
+
