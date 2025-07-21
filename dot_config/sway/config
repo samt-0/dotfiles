@@ -75,9 +75,7 @@ output * scale 0.8
 
     # Kill focused window
     #bindsym $mod+q kill
-    bindsym $mod+q exec swaymsg -t get_tree | \
-          jq 'recurse(.nodes[], .floating_nodes[]) | select(.focused).pid' | \
-          xargs -L 1 kill -9
+    bindsym $mod+q [workspace=__focused__] kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
