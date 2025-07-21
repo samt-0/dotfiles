@@ -75,7 +75,7 @@ output * scale 0.8
 
     # Kill focused window
     #bindsym $mod+q kill
-    bindsym $mod+q [workspace=[1234567890]] kill
+    bindsym $mod+q [workspace=2, workspace=32, workspace=3] kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
