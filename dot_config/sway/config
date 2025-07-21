@@ -75,7 +75,7 @@ output * scale 0.8
 
     # Kill focused window
     bindsym $mod+q kill
-    bindsym $mod+Ctrl+qexec swaymsg -t get_tree | \
+    bindsym $mod+Ctrl+q exec swaymsg -t get_tree | \
           jq '.. | select(.type?) | select(.focused==true).pid' | \
           xargs -L 1 kill -9
 
