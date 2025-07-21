@@ -74,9 +74,9 @@ output * scale 0.8
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Ctrl+q kill
+    bindsym $mod+q kill
     bindsym $mod+q exec swaymsg -t get_tree | \
-          jq '.. | select(.type?) | select(.focused==true).pid' | \
+          jq 'recurse(.nodes[], .floating_nodes[]) | select(.focused).pid' | \
           xargs -L 1 kill -9
 
     # Start your launcher
