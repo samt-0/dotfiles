@@ -158,7 +158,7 @@ assign [app_id="firefox"] 2
 assign [app_id="ghostty"] 3
 assign [class="obsidian"] 4
 assign [class="Signal"] 9
-assign [con="btop"] 10
+assign [title="btop"] 10
 
 
 #
