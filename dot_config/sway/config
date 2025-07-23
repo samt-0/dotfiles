@@ -156,8 +156,10 @@ exec udiskie
 
 assign [app_id="firefox"] 2
 assign [app_id="ghostty"] 3
-assign [app_id="obsidian"] 4
-assign [class="Signal"] 10
+assign [class="obsidian"] 4
+assign [class="Signal"] 9
+assign [con_mark="btop"] 10
+
 
 #
 # Layout stuff:
