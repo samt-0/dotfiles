@@ -4,4 +4,4 @@ Name=Launchapps Startup
 Comment=Launches Syncthing Web-GUI
 Icon=utilities-terminal
 Terminal=false
-Exec=dex /usr/share/applications/btop.desktop /usr/share/applications/lf.desktop /usr/share/applications/obsidian.desktop /usr/share/applications/signal-desktop.desktop /usr/share/applications/whatsapp.desktop /usr/share/applications/com.mitchellh.ghostty.desktop
+Exec=dex -w /usr/share/applications/btop.desktop /usr/share/applications/lf.desktop /usr/share/applications/obsidian.desktop /usr/share/applications/signal-desktop.desktop /usr/share/applications/whatsapp.desktop /usr/share/applications/com.mitchellh.ghostty.desktop
