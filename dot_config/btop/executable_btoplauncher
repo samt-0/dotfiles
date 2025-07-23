@@ -1,0 +1,3 @@
+!#/bin/bash
+
+sway exec "ghostty --title=btop -e btop"; sleep 1; sway [title="btop"] move workspace 10
