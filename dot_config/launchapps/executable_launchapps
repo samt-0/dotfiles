@@ -1,8 +1,8 @@
 !#/bin/bash
 
 firefox https://web.whatsapp.com &
-'sway exec "ghostty --title=btop -e btop"; sleep 1; sway [title="btop"] move workspace 10' &
 ghostty -e lf &
 ghostty &
 signal-desktop &
-obsidian
+obsidian &
+'sway exec "ghostty --title=btop -e btop"; sleep 1; sway [title="btop"] move workspace 10'
