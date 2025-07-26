@@ -4,5 +4,4 @@ Name=Launchapps Startup
 Comment=Launches Syncthing Web-GUI
 Icon=utilities-terminal
 Terminal=false
-Path=/home/thas/.config/launchapps/
-Exec=launchapps
+Exec=~/.config/launchapps/launchapps
