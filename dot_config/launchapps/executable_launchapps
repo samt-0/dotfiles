@@ -5,4 +5,4 @@ ghostty -e lf &
 ghostty &
 signal-desktop &
 obsidian &
-sway exec "ghostty --title=btop -e btop" && sleep 1 && sway [title="btop"] move workspace 10'
+sway exec "ghostty --title=btop -e btop" && sleep 1 && sway [title="btop"] move workspace 10
