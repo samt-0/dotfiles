@@ -1,8 +1,8 @@
 !#/bin/bash
 
 firefox 
-btop 
-lf 
+ghostty -e btop 
+ghostty -e lf 
 obsidian 
 signal-desktop
 ghostty 
