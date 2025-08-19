@@ -25,7 +25,7 @@ set $term ghostty
 # Your preferred application launcher
 set $menu wofi --show drun --matching=fuzzy
 
-set $lock swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper
+set $lock swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper -C ~/.cache/wal/swaylock.conf
 
 ### Output configuration
 #
