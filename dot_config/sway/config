@@ -240,7 +240,7 @@ gaps inner 5
 
 font pango: Iosevka 9
 
-default_border pixel 4
+default_border pixel 10
 
 set $cl_high $color14
 set $cl_indi $color14
