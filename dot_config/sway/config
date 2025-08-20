@@ -8,8 +8,6 @@ input * {
 	xkb_layout "de"
 }
 
-font pango: SourceCodePro Medium 5
-
 include "~/.cache/wal/colors-sway"
 ### Variables
 #
@@ -239,7 +237,7 @@ bindsym $mod+r mode "resize"
 # Visual style
 gaps inner 5
 
-font pango: Iosevka 9
+font pango: Iosevka 5
 
 default_border pixel 5
 
