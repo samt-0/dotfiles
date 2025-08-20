@@ -264,5 +264,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
-
-exec ~/.config/launchapps/launchapps
+exec $term
