@@ -8,7 +8,7 @@ input * {
 	xkb_layout "de"
 }
 
-font pango: SourceCodePro Medium 9
+font pango: SourceCodePro Medium 5
 
 include "~/.cache/wal/colors-sway"
 ### Variables
