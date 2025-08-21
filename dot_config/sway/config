@@ -237,7 +237,7 @@ bindsym $mod+r mode "resize"
 # Visual style
 gaps inner 5
 
-font pango:IosevkaNerdFont-Medium 5
+#font pango:IosevkaNerdFont-Medium 5
 
 default_border pixel 5
 
