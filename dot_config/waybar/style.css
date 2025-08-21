@@ -1,7 +1,7 @@
 @import '/home/thas/.cache/wal/colors-waybar.css';
 * {
   font-family: IosevkaNerdFont;
-  font-size: 9pt;
+  font-size: 10pt;
   color: @cursor;
   border: none;
   border-radius: 0;
