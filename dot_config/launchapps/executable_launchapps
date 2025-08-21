@@ -3,6 +3,6 @@
 firefox https://web.whatsapp.com &
 ghostty -e lf &
 ghostty &
-signal-desktop &
+signal-desktop --force-device-scale-factor=0.8 &
 obsidian &
 sway exec "ghostty --title=btop -e btop" && sleep 5 && sway [title="btop"] move workspace 10
