@@ -4,5 +4,3 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 GDK_DPI_SCALE=0.8
-test
-
