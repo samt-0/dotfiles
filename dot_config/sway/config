@@ -158,7 +158,7 @@ exec udiskie
 assign [app_id="librewolf"] 2
 assign [app_id="ghostty"] 3
 assign [app_id="obsidian"] 4
-assign [class="Signal"] 9
+assign [class="signal"] 9
 
 #
 # Layout stuff:
