@@ -159,6 +159,7 @@ assign [app_id="librewolf"] 2
 assign [app_id="ghostty"] 3
 assign [app_id="obsidian"] 4
 assign [app_id="signal"] 9
+assign [app_id="libreoffice*"] 1
 
 #
 # Layout stuff:
