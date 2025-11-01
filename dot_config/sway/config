@@ -266,4 +266,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
-exec $term
+exec $term -e fastfetch
