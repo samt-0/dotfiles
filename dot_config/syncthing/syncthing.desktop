@@ -4,4 +4,4 @@ Name=Syncthing
 Comment=Launches Syncthing Web-GUI
 Icon=utilities-terminal
 Terminal=false
-Exec=firefox https://localhost:8384
+Exec=librewolf https://localhost:8384
