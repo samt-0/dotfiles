@@ -3,6 +3,7 @@ image/jpeg=vimiv.desktop
 application/octet-stream=veracrypt.desktop
 image/png=vimiv.desktop
 application/json=nvim.desktop
+application/pdf=librewolf.desktop
 
 [Added Associations]
 font/ttf=nvim.desktop;
