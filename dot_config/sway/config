@@ -102,7 +102,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Down exec brightnessctl s 5%-
 
     # Screenshot
-    bindsym $mod+b exec "flameshot gui"
+    bindsym $mod+c exec "flameshot gui"
 
 exec udiskie
 
