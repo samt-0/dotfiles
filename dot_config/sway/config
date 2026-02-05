@@ -8,6 +8,7 @@ input * {
 	xkb_layout "de"
     accel_profile "flat"
     pointer_accel -0.6
+    touchpad_pointer_accel 4
 }
 
 include "~/.cache/wal/colors-sway"
