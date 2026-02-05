@@ -5,9 +5,12 @@
 # Read `man 5 sway` for a complete reference.
 
 input "type:pointer" {
-	xkb_layout "de"
     accel_profile "flat"
     pointer_accel -0.6
+}
+
+input * {
+	xkb_layout "de"
 }
 
 include "~/.cache/wal/colors-sway"
