@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Whatsapp
+Comment=Launches Syncthing Web-GUI
+Icon=utilities-terminal
+Terminal=false
+Exec=librewolf https://web.whatsapp.com
