@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Launchapps Startup
-Comment=Launches Syncthing Web-GUI
-Icon=utilities-terminal
-Terminal=false
-Exec=/home/thas/.config/launchapps/launchapps
