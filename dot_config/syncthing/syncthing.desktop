@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Syncthing
-Comment=Launches Syncthing Web-GUI
-Icon=utilities-terminal
-Terminal=false
-Exec=librewolf https://localhost:8384
