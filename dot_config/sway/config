@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-input "type:pointer" {
+input "9494:257:Cooler_Master_Technology_Inc._MM711_Gaming_Mouse" {
     accel_profile "flat"
     pointer_accel -0.8
 }
