@@ -154,6 +154,7 @@ map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
+map i calcdirsize
 
 # Movement
 map gc cd ~/.config
