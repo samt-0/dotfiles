@@ -153,6 +153,7 @@ map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
+map i hidden!
 
 # Movement
 map gc cd ~/.config
