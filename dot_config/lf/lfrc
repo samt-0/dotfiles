@@ -154,8 +154,7 @@ map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
-map ii calcdirsize
-map is set info size
+map I calcdirsize
 
 # Movement
 map gc cd ~/.config
