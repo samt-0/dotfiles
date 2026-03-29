@@ -18,4 +18,5 @@ alias cz=chezmoi
 alias code="nvim ~/documents/10-19_meins/11_freizeit/11.06_coding/"
 alias cdcode="cd ~/documents/10-19_meins/11_freizeit/11.06_coding/"
 alias qrcode="$HOME/documents/10-19_meins/11_freizeit/11.06_coding/small_projects/qrcode/qrcodemaker2.py"
+alias backup="$HOME/.config/tar/tar"
 eval "$(oh-my-posh init bash --config ~/.cache/wal/ohmyposh.json)"
