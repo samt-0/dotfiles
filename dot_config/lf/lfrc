@@ -4,6 +4,7 @@ set previewer ~/.config/lf/previewer
 set hidden true
 set ignorecase true
 set icons true
+set info size
 set sixel true
 set rulerfmt "%d  |%a  |%p  |\033[7;31m %m \033[0m  |\033[7;33m %c \033[0m  |\033[7;35m %s \033[0m  |\033[7;34m %f \033[0m  |%i/%t"
 
@@ -153,8 +154,6 @@ map bg setwallpaper
 map C clear
 map de DetachUsb
 map dv DetachencryptedUSB
-map i
-map i hidden!
 
 # Movement
 map gc cd ~/.config
