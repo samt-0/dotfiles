@@ -6,12 +6,9 @@ fdate=$(date +%y%m%d)
 buname=backup.${fdate}.tar.gz
 snarname=differential${fdate}.snar
 
-if [-e /home/$USER/backup/backup.tar.gz && -e /home/$USER/backup/differential.snar]
+if [-e /home/$USER/backup/backup.tar.gz && -e /home/$USER/backup/differential.snar]; then
     cp /home/$USER/backup/differential.snar /home/$USER/backup/${snarname}
-    sudo tar -cvvpzfg /home/thas/backup/${buname} /home/thas/backup/${snarname}
-    --exclude=.* --exclude=/home/thas/backup/ /home/downloads
+    sudo tar -cvvpzfg /home/thas/backup/${buname} /home/thas/backup/${snarname} --exclude=.* --exclude=/home/thas/backup/ /home/downloads
 else
-    sudo tar -cvvpzfg /home/thas/backup/backup.tar.gz
-    /home/thas/backup/differential.snar --exclude=.*
-    --exclude=/home/thas/backup/ /home/downloads
+    sudo tar -cvvpzfg /home/thas/backup/backup.tar.gz /home/thas/backup/differential.snar --exclude=.* --exclude=/home/thas/backup/ /home/downloads
 fi
