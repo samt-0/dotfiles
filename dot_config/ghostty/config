@@ -47,7 +47,7 @@ theme = "/home/thas/.cache/wal/ghostty.conf"
 
 macos-icon = xray
 
-font-family = "IosevkaNerdFont"
+font-family = "Iosevka Nerd Font"
 font-thicken = true
 font-size = 9
 
