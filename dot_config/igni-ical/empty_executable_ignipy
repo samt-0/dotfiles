@@ -4,6 +4,10 @@ from datetime import datetime, timezone, timedelta
 from ics import Calendar, Event
 
 
+c = Calendar()
+e = Event()
+
+
 titlel, datel, timel = []
 with open("demofile.txt", "r") as f:
     for i in f:
@@ -16,8 +20,7 @@ with open("demofile.txt", "r") as f:
             datel.append(b[0])
             timel.append(b[1])
 
-c = Calendar()
-e = Event()
+
 e.summary = "My cool event"
 e.description = "A meaningful description"
 e.begin = datetime.fromisoformat("2022-06-06T12:05:23+02:00")
@@ -33,5 +36,5 @@ e.end = datetime(
 c.events.append(e)
 
 
-with open("my.ics", "w", newline='') as f:
+with open("igni.ics", "w", newline='') as f:
     f.write(c.serialize())
