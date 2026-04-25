@@ -14,18 +14,19 @@ with open("plaintext", "r") as f:
     for i in range(len(f)):
         if i % 2:
             date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M")
-            ldate.append(date_obj.isoformat())
+            ldate.append(date_obj)
         else:
            ltitle.append(f[i])
 
 
 for i in range(len(ltitle)):
     e.summary = ltitle[i]
-    e.begin = ldate[i]
-    if datetime.ldate[i].strftime("%H%M") == "0000":
+    e.begin = ldate[i].isoformat()
+    if ldate[i].strftime("%H%M") == "0000":
         e.make_all_day()
     else:
-        e.end = ldate[i] + delta
+        x = ldate[i] + delta
+        e.end = x.isoformat()
     
     c.events.append(e)
 
