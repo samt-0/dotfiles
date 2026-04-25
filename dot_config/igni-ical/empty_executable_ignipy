@@ -6,7 +6,7 @@ from ics import Calendar, Event
 
 c = Calendar()
 e = Event()
-delta = datetime.timedelta(hours=2)
+delta = {“hours”:2}
 
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
