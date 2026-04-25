@@ -13,6 +13,7 @@ with open("plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
         if i % 2:
+            print(f[i])
             date_obj = datetime.datetime.strptime(f[i], "%d.%m.%Y %H:%M")
             ldate.append(date_obj.isoformat())
         else:
