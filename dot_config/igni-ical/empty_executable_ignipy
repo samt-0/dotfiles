@@ -11,8 +11,7 @@ delta = datetime.timedelta(hours=2)
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     f = f.readlines()
-    print(f)
-    print(f.type())
+    print(len(f))
 """
     for i in len(f):
         if i % 2:
