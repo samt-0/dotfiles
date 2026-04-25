@@ -11,11 +11,11 @@ delta = datetime.timedelta(hours=2)
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     for i in f:
-        if i % 2 == 0:
-            ltitle.append(f)
-        else:
+        if i % 2:
             date_obj = datetime.strptime(f, "%d.%m.%Y %H:%M")
             ldate.append(date_obj.isoformat())
+        else:
+           ltitle.append(f)
 
 for i in ltitle:
     e.summary = ltitle[i]
