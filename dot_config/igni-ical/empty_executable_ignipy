@@ -11,6 +11,9 @@ delta = datetime.timedelta(hours=2)
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     f = f.readlines()
+    print(f)
+
+"""
     for i in len(f):
         if i % 2:
             date_obj = datetime.strptime(f, "%d.%m.%Y %H:%M")
@@ -33,3 +36,4 @@ for i in ltitle:
 
 with open("igni.ics", "w", newline='') as f:
     f.write(c.serialize())
+"""
