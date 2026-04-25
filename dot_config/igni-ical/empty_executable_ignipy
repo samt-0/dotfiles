@@ -14,7 +14,7 @@ with open("plaintext", "r") as f:
     for i in range(len(f)):
         if i % 2:
             print(f[i])
-            date_obj = datetime.datetime.strptime(f[i], "%d.%m.%Y %H:%M")
+            date_obj = datetime.datetime.strptime(f[i], "%d.%m.%Y %H:%M00")
             ldate.append(date_obj.isoformat())
         else:
            ltitle.append(f[i])
