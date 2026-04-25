@@ -18,10 +18,8 @@ with open("plaintext", "r") as f:
         else:
            ltitle.append(f[i])
 
-print(ldate)
 
-"""
-for i in ltitle:
+for i in range(len(ltitle)):
     e.summary = ltitle[i]
     e.begin = ldate[i]
     if ldate[i].strftime("%H%M") == "0000":
@@ -31,7 +29,7 @@ for i in ltitle:
     
     c.events.append(e)
 
-
+"""
 with open("igni.ics", "w", newline='') as f:
     f.write(c.serialize())
 """
