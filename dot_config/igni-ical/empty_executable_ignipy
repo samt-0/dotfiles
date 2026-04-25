@@ -13,7 +13,7 @@ with open("plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
         if i % 2:
-            date_obj = datetime.strptime(f, "%d.%m.%Y %H:%M")
+            date_obj = datetime.datetime.strptime(f, "%d.%m.%Y %H:%M")
             ldate.append(date_obj.isoformat())
         else:
            ltitle.append(f)
