@@ -1,39 +1,31 @@
 #!/usr/bin/env python
 
-from datetime import datetime, timezone, timedelta
+import datetime
 from ics import Calendar, Event
 
 
 c = Calendar()
 e = Event()
+delta = datetime.timedelta(hours=2)
 
-
-titlel, datel, timel = []
+ltitle, ldate = []
 with open("demofile.txt", "r") as f:
     for i in f:
         if i % 2 == 0:
-            titlel.append(f)
-        else
-            # cut the values in the middle and convert them into usable
-            # timeformats for the next steps
-            b = f.split(" ")
-            datel.append(b[0])
-            timel.append(b[1])
+            ltitle.append(f)
+        else:
+            date_obj = datetime.strptime(f, "%d.%m.%Y %H:%M")
+            ldate.append(date_obj.isoformat())
 
-
-e.summary = "My cool event"
-e.description = "A meaningful description"
-e.begin = datetime.fromisoformat("2022-06-06T12:05:23+02:00")
-e.end = datetime(
-    year=2022,
-    month=6,
-    day=6,
-    hour=12,
-    minute=5,
-    second=23,
-    tzinfo=timezone(timedelta(seconds=7200)),
-)
-c.events.append(e)
+for i in ltitle:
+    e.summary = ltitle[i]
+    e.begin = ldate[i]
+    if ldate[i].strftime("%H%M") == "0000":
+        e.make_all_day()
+    else:
+        e.end = ldate[i] + delta
+    
+    c.events.append(e)
 
 
 with open("igni.ics", "w", newline='') as f:
