@@ -19,16 +19,13 @@ with open("plaintext", "r") as f:
            ltitle.append(f[i])
 
 
-for i in range(len(ltitle)):
-    e.name = ltitle[i]
-    e.begin = ldate[i].isoformat()
-    print(ldate[i])
-    if ldate[i].strftime("%H%M") == "0000":
-        e.make_all_day()
-    else:
-        e.duration = delta
-    
-c.events.add(e)
-
 with open("igni.ics", "w", newline='') as f:
-    f.writelines(c.serialize_iter())
+    for i in range(len(ltitle)):
+        e.name = ltitle[i]
+        e.begin = ldate[i].isoformat()
+        if ldate[i].strftime("%H%M") == "0000":
+            e.make_all_day()
+        else:
+            e.duration = delta
+        c.events.add(e)
+        f.writelines(c.serialize_iter())
