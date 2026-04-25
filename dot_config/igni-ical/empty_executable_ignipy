@@ -20,7 +20,7 @@ with open("plaintext", "r") as f:
 
 
 for i in range(len(ltitle)):
-    e.summary = ltitle[i]
+    e.name = ltitle[i]
     e.begin = ldate[i].isoformat()
     print(ldate[i])
     if ldate[i].strftime("%H%M") == "0000":
