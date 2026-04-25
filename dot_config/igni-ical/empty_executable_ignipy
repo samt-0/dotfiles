@@ -24,8 +24,8 @@ for i in range(len(ltitle)):
     e.begin = ldate[i].isoformat()
     if ldate[i].strftime("%H%M") == "0000":
         e.make_all_day()
-        print(ldate[i])
     else:
+        print(ldate[i])
         x = ldate[i] + delta
         e.end = x.isoformat()
     
