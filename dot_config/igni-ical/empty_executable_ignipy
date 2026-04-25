@@ -25,12 +25,9 @@ for i in range(len(ltitle)):
     if ldate[i].strftime("%H%M") == "0000":
         e.make_all_day()
     else:
-        print(ldate[i])
         e.duration = delta
     
 c.events.add(e)
 
-"""
 with open("igni.ics", "w", newline='') as f:
     f.write(c.serialize())
-"""
