@@ -31,4 +31,4 @@ for i in range(len(ltitle)):
 c.events.add(e)
 
 with open("igni.ics", "w", newline='') as f:
-    f.write(c.serialize())
+    f.write(c.serialize_iter())
