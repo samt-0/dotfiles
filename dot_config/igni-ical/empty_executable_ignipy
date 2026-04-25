@@ -27,6 +27,7 @@ for i in range(len(ltitle)):
     else:
         print(ldate[i])
         x = ldate[i] + delta
+        print(x)
         e.end = x.isoformat()
     
 c.events.add(e)
