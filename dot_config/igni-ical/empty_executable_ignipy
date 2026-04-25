@@ -8,7 +8,7 @@ c = Calendar()
 e = Event()
 delta = datetime.timedelta(hours=2)
 
-ltitle, ldate = []
+ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     for i in f:
         if i % 2 == 0:
