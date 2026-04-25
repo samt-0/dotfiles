@@ -12,6 +12,8 @@ ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     f = f.readlines()
     print(len(f))
+    for i in len(f):
+        print(i)
 """
     for i in len(f):
         if i % 2:
