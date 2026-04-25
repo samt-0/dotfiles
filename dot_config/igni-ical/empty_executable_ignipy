@@ -28,7 +28,7 @@ for i in range(len(ltitle)):
         x = ldate[i] + delta
         e.end = x.isoformat()
     
-    c.events.append(e)
+c.events.add(e)
 
 """
 with open("igni.ics", "w", newline='') as f:
