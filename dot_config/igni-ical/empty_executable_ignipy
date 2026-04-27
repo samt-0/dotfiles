@@ -5,11 +5,11 @@ from ics import Calendar, Event
 
 
 c = Calendar()
-e = []
 delta = {"hours":2}
 tz = pytz.timezone("Europe/Vienna")
+ltitle, ldate, e, lcal = [], [], [], []
 
-ltitle, ldate = [], []
+
 with open(".config/igni-ical/plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
@@ -30,7 +30,8 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
         wurden und das file wieder geschrieben werden kann.
     """
     f = f.readlines()
-    print(f)
+    for i in range(len(f)):
+        
 
 
 
