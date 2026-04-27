@@ -8,6 +8,7 @@ c = Calendar()
 e = []
 delta = {"hours":2}
 tz = pytz.timezone("Europe/Berlin")
+print(tz)
 
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
