@@ -7,7 +7,7 @@ from ics import Calendar, Event
 c = Calendar()
 e = []
 delta = {"hours":2}
-tz = pytz.timezone("Europe/London")
+tz = pytz.timezone("Europe/Vienna")
 
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
