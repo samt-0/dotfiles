@@ -5,8 +5,7 @@ from ics import Calendar, Event
 
 
 c = Calendar()
-le = list()
-e = Event()
+e = []
 delta = {"hours":2}
 
 ltitle, ldate = [], []
@@ -22,8 +21,9 @@ with open("plaintext", "r") as f:
 
 with open("igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
-        e.name = ltitle[i]
-        e.begin = ldate[i].isoformat()
+        e.append(Event())
+        e[i].name = ltitle[i]
+        e[i].begin = ldate[i].isoformat()
         if ldate[i].strftime("%H%M") == "0000":
             e.make_all_day()
         else:
