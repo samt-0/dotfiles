@@ -30,8 +30,18 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
         wurden und das file wieder geschrieben werden kann.
     """
     f = f.readlines()
-#    for i in range(len(f)):
-        
+    lbuffer = []
+    for i in range(len(f)):
+        if not ("END:VCALENDAR" in f[i] or "BEGIN:VCALENDAR" in f[i] or\
+                "VERSION:2.0" in f[i] or "PRODID:ics.py - http://git.io/lLljaA"\
+                in f[i]):
+            if "END:VEVENT" in f[i]:
+                lbuffer.append(f[i])
+                lcal.append(tuple(lbuffer))
+                lbuffer.clear()
+            else:
+                lbuffer.append(f[i])
+                    
 
 
 
@@ -44,7 +54,6 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
             e[i].make_all_day()
         else:
             e[i].duration = delta
-        print(e[i])
         c.events.add(e[i])
     f.writelines(c.serialize_iter())
 
