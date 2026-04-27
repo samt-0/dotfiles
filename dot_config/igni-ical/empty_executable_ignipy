@@ -30,6 +30,8 @@ with open("igni.ics", "w", newline='') as f:
             e.duration = delta
         le.append(e)
         c.events.add(le[i])
+        print(ltitle[i])
+        print(le[i])
 
     print(le)
     calendar_string = c.serialize()
