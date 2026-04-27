@@ -15,7 +15,8 @@ with open("plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
         if i % 2:
-            date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").replace(tzinfo=tz)
+            date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M")
+            tz.localize(date_obj)
             ldate.append(date_obj)
         else:
            ltitle.append(f[i])
