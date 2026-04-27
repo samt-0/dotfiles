@@ -44,6 +44,7 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
             e[i].make_all_day()
         else:
             e[i].duration = delta
+        print(e[i])
         c.events.add(e[i])
     f.writelines(c.serialize_iter())
 
