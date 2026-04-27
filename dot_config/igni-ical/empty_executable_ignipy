@@ -27,8 +27,8 @@ with open("igni.ics", "w", newline='') as f:
             e.make_all_day()
         else:
             e.duration = delta
-        c.events.add(e)
 
+    c.events.add(e)
     f.writelines(c.serialize_iter())
 
 # File passt noch nicht, Syntax nicht richtig mit events und kalender. wenn das
