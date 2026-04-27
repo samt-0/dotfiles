@@ -25,17 +25,14 @@ with open("igni.ics", "w", newline='') as f:
         e[i].name = ltitle[i]
         e[i].begin = ldate[i].isoformat()
         if ldate[i].strftime("%H%M") == "0000":
-            e.make_all_day()
+            e[i].make_all_day()
         else:
-            e.duration = delta
-        le.append(e)
-        c.events.add(le[i])
-        print(ltitle[i])
-        print(le[i])
+            e[i].duration = delta
+        c.events.add(e[i])
+        print(e[i])
 
-    print(le)
     calendar_string = c.serialize()
-    print(calendar_string)
+    #print(calendar_string)
 
 """
     c.events.add(e)
