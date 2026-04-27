@@ -30,7 +30,7 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
         wurden und das file wieder geschrieben werden kann.
     """
     f = f.readlines()
-    for i in range(len(f)):
+#    for i in range(len(f)):
         
 
 
