@@ -5,7 +5,7 @@ from ics import Calendar, Event
 
 
 c = Calendar()
-e = Event()
+e = list(Event())
 delta = {"hours":2}
 
 ltitle, ldate = [], []
@@ -21,13 +21,13 @@ with open("plaintext", "r") as f:
 
 with open("igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
-        e.name = ltitle[i]
-        e.begin = ldate[i].isoformat()
+        e[i].name = ltitle[i]
+        e[i].begin = ldate[i].isoformat()
         if ldate[i].strftime("%H%M") == "0000":
-            e.make_all_day()
+            e[i].make_all_day()
         else:
-            e.duration = delta
-        c.events.add(e)
+            e[i].duration = delta
+        c.events.add(e[i])
 
     calendar_string = c.serialize()
     print(calendar_string)
