@@ -1,4 +1,4 @@
 !#/bin/bash
 
 
-curl https://www.igni.at/veranstaltungen | sed -n '/card"/{ n; n; n; n; p; n; n; n; n; n; n; n; n; n; p}' | sed 's/^[^>]*>//; s </.*$  ; s.<br />. .g; s/^am //g; s/ Uhr$//g' > plaintext && ./$HOME/.config/igni-ical/ignipy
+curl https://www.igni.at/veranstaltungen | sed -n '/card"/{ n; n; n; n; p; n; n; n; n; n; n; n; n; n; p}' | sed 's/^[^>]*>//; s </.*$  ; s.<br />. .g; s/^am //g; s/ Uhr$//g' > plaintext && .$HOME/.config/igni-ical/ignipy
