@@ -7,14 +7,15 @@ from ics import Calendar, Event
 c = Calendar()
 e = []
 delta = {"hours":2}
-tz = pytz.timezone("Europe/Vienna")
+# tz = pytz.timezone("Europe/Vienna")
 
 ltitle, ldate = [], []
 with open("plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
         if i % 2:
-            date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").replace(tzinfo=tz)
+            date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M")
+            #.replace(tzinfo=tz)
             ldate.append(date_obj)
         else:
            ltitle.append(f[i])
