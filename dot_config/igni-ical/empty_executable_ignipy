@@ -8,10 +8,9 @@ c = Calendar()
 e = []
 delta = {"hours":2}
 tz = pytz.timezone("Europe/Vienna")
-print(tz)
 
 ltitle, ldate = [], []
-with open("plaintext", "r") as f:
+with open(".config/igni-ical/plaintext", "r") as f:
     f = f.readlines()
     for i in range(len(f)):
         if i % 2:
@@ -21,7 +20,7 @@ with open("plaintext", "r") as f:
            ltitle.append(f[i])
 
 
-with open("igni.ics", "w", newline='') as f:
+with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
         e.append(Event())
         e[i].name = ltitle[i]
