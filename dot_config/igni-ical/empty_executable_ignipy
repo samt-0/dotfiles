@@ -21,6 +21,7 @@ with open("plaintext", "r") as f:
 
 with open("igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
+        print(i)
         e[i] = Event()
         e[i].name = ltitle[i]
         e[i].begin = ldate[i].isoformat()
