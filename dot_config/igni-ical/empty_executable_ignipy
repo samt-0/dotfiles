@@ -5,7 +5,7 @@ from ics import Calendar, Event
 
 
 c = Calendar()
-e = list(Event())
+e = Event()
 delta = {"hours":2}
 
 ltitle, ldate = [], []
