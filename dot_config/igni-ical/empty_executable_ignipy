@@ -28,7 +28,7 @@ with open("igni.ics", "w", newline='') as f:
             e.make_all_day()
         else:
             e.duration = delta
-        le[i].append(e)
+        le.append(e)
         c.events.add(le[i])
 
     calendar_string = c.serialize()
