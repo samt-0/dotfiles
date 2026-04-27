@@ -20,7 +20,18 @@ with open(".config/igni-ical/plaintext", "r") as f:
            ltitle.append(f[i])
 
 
-with open(".config/igni-ical/igni.ics", "w", newline='') as f:
+with open(".config/igni-ical/igni.ics", "rw", newline='') as f:
+    """
+        das file hereinladen und strukturieren um einen Vergleich zu
+        ermöglichen.
+        if ltitle und ldate gibts schon dann überspringen und die werte ""
+        setzen. und an der stelle das bestehende event hinein kopieren
+        so weiter machen bis alle events drinnen sind und die neuen hinzugefügt
+        wurden und das file wieder geschrieben werden kann.
+    """
+    f = f.readlines()
+    print(f)
+
     for i in range(len(ltitle)):
         e.append(Event())
         e[i].name = ltitle[i]
@@ -31,6 +42,9 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
             e[i].duration = delta
         c.events.add(e[i])
     f.writelines(c.serialize_iter())
-# File passt noch nicht, Syntax nicht richtig mit events und kalender. wenn das
+
+# So Umschreiben, damit nur neue Events mitaufgenommen werden, damit sich die
+# uuid nicht ändert und jedes mal das file wieder importiert werden kann ohne
+# doppelte einträge zu generieren
 # funktioniert dann überlegen ob ich das irgendwie automatisch machen kann mit
 # hochladen in einen kalender... oder das skript irgendwo laufen lassen kann.
