@@ -31,6 +31,7 @@ with open("igni.ics", "w", newline='') as f:
         le.append(e)
         c.events.add(le[i])
 
+    print(le)
     calendar_string = c.serialize()
     print(calendar_string)
 
