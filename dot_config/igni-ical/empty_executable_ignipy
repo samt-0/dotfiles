@@ -49,6 +49,7 @@ for i in range(len(ltitle)):
         if ltitle[i] in word:
             result.append(j)
     print(result)
+    print(ltitle[i])
     if result:
         for g in result:
             print(lcal[g])
