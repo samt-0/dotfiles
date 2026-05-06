@@ -46,10 +46,9 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
 for i in range(len(ltitle)):
     result = list()
     for j, word in enumerate(lcal):
+        print(word)
         if ltitle[i] in word:
             result.append(j)
-    print(result)
-    print(ltitle[i])
     if result:
         for g in result:
             print(lcal[g])
