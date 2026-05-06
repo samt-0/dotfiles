@@ -44,7 +44,8 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                     
 
 for i in range(len(ltitle)):
-#    if ltitle[i] in lcal:
+    print(ltitle[i])
+    if ltitle[i] in lcal:
         print(lcal.index(ltitle[i]))
 """
         if ldate......
