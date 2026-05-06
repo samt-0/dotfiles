@@ -46,8 +46,8 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
 for i in range(len(ltitle)):
     result = list()
     for j, word in enumerate(lcal):
-        print(j, word)
         for k, tupword in enumerate(lcal[j]):
+            print(k, tupword)
             if ltitle[i] in tupword:
                 print(tupword)
                 result.append(j)
