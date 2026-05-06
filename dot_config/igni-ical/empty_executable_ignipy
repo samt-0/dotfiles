@@ -47,9 +47,10 @@ for i in range(len(ltitle)):
     result = list()
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
-            if ltitle[i] in tupword:
+            if tupword.find(ltitle[i]:
                 print(tupword)
                 result.append(j)
+                result.append(k)
     if result:
         for g in result:
             print(lcal[g])
