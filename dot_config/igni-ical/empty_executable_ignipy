@@ -44,16 +44,22 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                     
 
 for i in range(len(ltitle)):
-    print(ltitle[i])
-    print(lcal)
-    if ltitle[i] in lcal:
-        print(lcal.index(ltitle[i]))
-"""
-        if ldate......
-            ltitle.pop(i)
-        ldate.pop(i)
-    elif 
-"""
+    result = list()
+    for j, word in enumerate(lcal):
+        if ltitle[i] in word:
+            result.append(j)
+    print(result)
+    if result:
+        for g in result:
+            print(lcal[g])
+            print(lcal[g])
+            if ldate[i] == lcal[g]:
+                ltitle.pop(i)
+                ldate.pop(i)
+                break
+            elif ldate[i] != lcal[g]:
+                lcal.pop(g)
+                break
 
 
 
