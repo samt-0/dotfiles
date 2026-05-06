@@ -43,6 +43,16 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                 lbuffer.append(f[i])
                     
 
+for i in len(ltitle):
+    if ltitle[i] in lcal:
+        print(lcal.index(ltitle[i])
+"""
+        if ldate......
+            ltitle.pop(i)
+        ldate.pop(i)
+    elif 
+"""
+
 
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
