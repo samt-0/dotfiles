@@ -48,9 +48,10 @@ for i in range(len(ltitle)):
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
             if tupword.find(ltitle[i]):
-                print(tupword)
+                print(ltitle[i], tupword)
                 result.append(j)
                 result.append(k)
+"""
     if result:
         for g in result:
             print(lcal[g])
@@ -62,6 +63,7 @@ for i in range(len(ltitle)):
             elif ldate[i] != lcal[g]:
                 lcal.pop(g)
                 break
+"""
 
 
 
