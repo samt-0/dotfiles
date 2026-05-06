@@ -52,6 +52,9 @@ for i in range(len(ltitle)):
                 result.append(j)
                 result.append(k)
 """
+das letzte if oberhalb funktioniert noch nicht. ich habe keine ahnung warum weil
+im online python gehts.... wenn das geht dann die ifs hier drunter korrigieren
+und dazu tun und weiter im plan wie oben und unten beschrieben.
     if result:
         for g in result:
             print(lcal[g])
