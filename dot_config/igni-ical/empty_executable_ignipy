@@ -45,10 +45,8 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
 
 for i in range(len(ltitle)):
     result = list()
-    print(f"test.{ltitle[i]}.test")
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
-#            print(f"tupx{tupword}xtup")
             if tupword.find(ltitle[i]) > -1:
                 print(ltitle[i], tupword)
                 result.append(j)
