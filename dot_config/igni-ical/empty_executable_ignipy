@@ -48,17 +48,18 @@ for i in range(len(ltitle)):
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
             if tupword.find(ltitle[i]) > -1:
-                print(ldate[i])
                 resultj.append(j)
                 resultk.append(k)
     if resultj:
         for g in range(len(resultj)):
-            # to isoformat
-            if ldate[i] == lcal[resultj[g]][int(resultk[g])-1]:
+            compisodate = lcal[resultj[g]][int(resultk[g])-1].split(":")
+            print(ldate[i], compisodate)
+            """
+            if ldate[i] == 
                 ltitle.pop(i)
                 ldate.pop(i)
                 break
-
+"""
 
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
