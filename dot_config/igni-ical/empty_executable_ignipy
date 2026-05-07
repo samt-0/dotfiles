@@ -72,11 +72,12 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
         e.append(Event())
         e[i].name = ltitle[i]
-        e[i].begin = ldate[i].isoformat()
         if ldate[i].strftime("%H%M") == "0000":
-            ldate[i].timedelta(hours=24)
+            ldate[i].timedelta(days=1)
+            e[i].begin = ldate[i].isoformat()
             e[i].make_all_day()
         else:
+            e[i].begin = ldate[i].isoformat()
             e[i].duration = delta
         c.events.add(e[i])
     f.writelines(c.serialize_iter())
