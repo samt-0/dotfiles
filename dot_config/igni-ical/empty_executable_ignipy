@@ -52,9 +52,14 @@ for i in range(len(ltitle)):
                 resultk.append(k)
     if resultj:
         for g in range(len(resultj)):
-            compisodate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
-            var = datetime.datetime.fromisoformat(compisodate[1]).astimezone(tz)
-            print(ldate[i], var)
+            if ldate[i].strftime("%H%M") == "0000":
+                compisodate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
+                var = datetime.datetime.fromisoformat(compisodate[1])
+                print(ldate[i], var)
+            else:
+                compisodate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
+                var = datetime.datetime.fromisoformat(compisodate[1]).astimezone(tz)
+                print(ldate[i], var)
             """
             if ldate[i] == 
                 ltitle.pop(i)
