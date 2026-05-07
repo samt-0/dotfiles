@@ -53,7 +53,7 @@ for i in range(len(ltitle)):
     if resultj:
         for g in range(len(resultj)):
             compisodate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
-            var = datetime.datetime.fromiso(compisodate[1])
+            var = datetime.datetime.fromisoformat(compisodate[1])
             print(var)
             """
             if ldate[i] == 
