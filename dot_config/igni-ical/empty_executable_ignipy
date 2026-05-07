@@ -74,6 +74,7 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
         e[i].name = ltitle[i]
         e[i].begin = ldate[i].isoformat()
         if ldate[i].strftime("%H%M") == "0000":
+            ldate[i].timedelta(hours=24)
             e[i].make_all_day()
         else:
             e[i].duration = delta
