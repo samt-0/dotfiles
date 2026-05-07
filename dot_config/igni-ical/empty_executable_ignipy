@@ -52,8 +52,9 @@ for i in range(len(ltitle)):
                 resultk.append(k)
     if resultj:
         for g in range(len(resultj)):
-            compisodate = datetime.datetimelcal[resultj[g]][int(resultk[g])-1].strip().split(":")
-            print(ldate[i], compisodate)
+            compisodate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
+            var = datetime.datetime.fromiso(compisodate[1])
+            print(var)
             """
             if ldate[i] == 
                 ltitle.pop(i)
