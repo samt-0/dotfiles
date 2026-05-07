@@ -52,7 +52,7 @@ for i in range(len(ltitle)):
                 resultk.append(k)
     if resultj:
         for g in range(len(resultj)):
-            compisodate = lcal[resultj[g]][int(resultk[g])-1].split(":")
+            compisodate = lcal[resultj[g]][int(resultk[g])-1].split(":").strip()
             print(ldate[i], compisodate)
             """
             if ldate[i] == 
