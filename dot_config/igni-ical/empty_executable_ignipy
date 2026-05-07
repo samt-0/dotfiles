@@ -73,7 +73,7 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
         e.append(Event())
         e[i].name = ltitle[i]
         if ldate[i].strftime("%H%M") == "0000":
-            ldate[i].replace(days+=1)
+            ldate[i].replace(day+=1)
             e[i].begin = ldate[i].isoformat()
             e[i].make_all_day()
         else:
