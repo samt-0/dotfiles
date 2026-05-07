@@ -17,7 +17,7 @@ with open(".config/igni-ical/plaintext", "r") as f:
             date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
             ldate.append(date_obj)
         else:
-           ltitle.append(f[i])
+           ltitle.append(f[i].strip())
 
 
 with open(".config/igni-ical/igni.ics", "r", newline='') as f:
