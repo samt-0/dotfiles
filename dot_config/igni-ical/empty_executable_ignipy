@@ -60,7 +60,6 @@ for i in range(len(ltitle)):
                 #ltitle.pop(i)
                 #ldate.pop(i)
                 break
-"""
 
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
