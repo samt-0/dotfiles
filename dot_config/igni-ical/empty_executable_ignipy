@@ -29,12 +29,10 @@ def readptext():
 def compareadddb():
     sqlc = sqlit3.connect("igniics.db")
     crsr = sqlc.cursor()
-
-CREATE TABLE IF NOT EXISTS eventstable (
+    sqlcomm = """CREATE TABLE IF NOT EXISTS eventstable (
     uid integer auto_increment primary key,
     eventname text not null,
-    eventtime text not null
-);
+    eventtime text not null);"""
 
 
     sqlc.commit()
