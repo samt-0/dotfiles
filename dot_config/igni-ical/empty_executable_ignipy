@@ -3,107 +3,137 @@
 import datetime, pytz, sqlite3
 from ics import Calendar, Event
 
+c = Calendar()
+delta = {"hours":2}
+tz = pytz.timezone("Europe/Vienna")
+newevents, e, lcal = [], [], []
 
 def main():
-    c = Calendar()
-    delta = {"hours":2}
-    tz = pytz.timezone("Europe/Vienna")
-    ltitle, ldate, e, lcal = [], [], [], []
     readptext()
     compareadddb()
     makeics()
 
 
 def readptext():
-
     with open(".config/igni-ical/plaintext", "r") as f:
         f = f.readlines()
         for i in range(len(f)):
             if i % 2:
                 date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
-                ldate.append(date_obj)
+                newevents[1].append(date_obj)
             else:
-               ltitle.append(f[i].strip())
+               newevents[0].append(f[i].strip())
+
+    return
 
 
 def compareadddb():
-    sqlc = sqlit3.connect("igniics.db")
+    # open connection
+    sqlc = sqlite3.connect("igniics.db")
     crsr = sqlc.cursor()
-    sqlcomm = """CREATE TABLE IF NOT EXISTS eventstable (
-    uid integer auto_increment primary key,
-    eventname text not null,
-    eventtime text not null);"""
 
+    # create table if not already existing
+    crsr.execute("CREATE TABLE IF NOT EXISTS eventstable (\
+        id integer auto_increment primary key,\
+        eventname text not null,\
+        eventtime text not null,\
+        uuid text);")
+    
+    # get the eventnames and times
+    crsr.execute("SELECT eventname, eventtime FROM eventstable")
+    ans = crsr.fetchall()
 
+    # compare the names and times
+    popbuffer = list()
+    for i, val in enumerate(newevents[0]):
+        for j in ans[0]:
+            if (val == j) and (newevents[1][i] == ans[1][j]):
+                popbuffer.append(i)
+
+    # pop the already existing ones from the list/add the new ones to the db
+    popbuffer.reverse()
+    for i in popbuffer:
+        newevents[0].pop(i)
+        newevents[1].pop(i)
+
+    # save updated names, uid, and times as lists and return them
+    for i in range(len(newevents[0])):
+        crsr.execute("INSERT INTO eventstable (eventname, eventtime) VALUES\
+            ("{newevents[0][i]}", "{newevents[1][i]}")")
+    crsr.execute("SELECT eventname FROM eventstable")
+    lcal[0] = crsr.fetchall()
+    crsr.execute("SELECT eventtime FROM eventstable")
+    lcal[1] = crsr.fetchall()
+    crsr.execute("SELECT uuid FROM eventstable")
+    lcal[2] = crsr.fetchall()
+    
+    # save and close connection
     sqlc.commit()
     sqlc.close()
+    return
 
 
 def makeics():
-
-
-
-
-
-with open(".config/igni-ical/igni.ics", "r", newline='') as f:
-    f = f.readlines()
-    lbuffer = []
-    for i in range(len(f)):
-        if not ("END:VCALENDAR" in f[i] or "BEGIN:VCALENDAR" in f[i] or\
-                "VERSION:2.0" in f[i] or "PRODID:ics.py - http://git.io/lLljaA"\
-                in f[i]):
-            if "END:VEVENT" in f[i]:
-                lbuffer.append(f[i])
-                lcal.append(list(lbuffer))
-                lbuffer.clear()
+    # make the calendar
+    with open(".config/igni-ical/igni.ics", "w", newline='') as f:
+        for i in range(len(lcal[0])):
+            e.append(Event())
+            e[i].name = lcal[0][i]
+            if lcal[1][i].strftime("%H%M") == "0000":
+                lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
+                e[i].begin = lcal[1][i].isoformat()
+                e[i].make_all_day()
             else:
-                lbuffer.append(f[i])
-                    
+                e[i].begin = lcal[1][i].isoformat()
+                e[i].duration = delta
+            if lcal[2][i]:
+                e[i].uid = lcal[2][i]
+            c.events.add(e[i])
+        f.writelines(c.serialize_iter())
 
-indexbuffer = list()
-for i in range(len(ltitle)):
-    resultj, resultk = list(), list()
-    for j, word in enumerate(lcal):
-        for k, tupword in enumerate(lcal[j]):
-            if type(tupword) != datetime.datetime:
-                if tupword.find(ltitle[i]) > -1:
-                    resultj.append(j)
-                    resultk.append(k)
-                if tupword.find("SUMMARY") > -1:
-                    lcal[j][k].strip().replace("SUMMARY:", "")
-                    print(lcal[j][k])
+    # reading the new ics file
+    fuid = list()
+    newuid = ["", "", ""]
+    with open(".config/igni-ical/igni.ics", "r", newline='') as f:
+        f = f.readlines()
+        lbuffer = list()
+        for i in range(len(f)):
+            if not ("END:VCALENDAR" in f[i] or "BEGIN:VCALENDAR" in f[i] or\
+                    "VERSION:2.0" in f[i] or "PRODID:ics.py - http://git.io/lLljaA"\
+                    in f[i]):
+                if "END:VEVENT" in f[i]:
+                    lbuffer.append(f[i])
+                    fuid.append(list(lbuffer))
+                    lbuffer.clear()
+                else:
+                    lbuffer.append(f[i])
 
-    if resultj:
-        for g in range(len(resultj)):
-            bufdate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
-            lcal[resultj[g]][int(resultk[g])-1] = datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz)
-            if ldate[i] == lcal[resultj[g]][int(resultk[g])-1]:
-                indexbuffer.append(i)
-                break
+    # string manipulation to save in a usable and comparable format
+    for i, val in enumerate(fuid):
+        for j, field in enumerate(val):
+            if field.find("SUMMARY"):
+                field.strip().split(":", 1)
+                newuid[0].append(field[1])
+                fuid[i][j+1].strip().split(":", 1)
+                newuid[2].append(fuid[i][j+1][1])
+                bufdate = fuid[i][j-1].strip().split(":", 1)
+                newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
 
-indexbuffer.reverse()
-for i in indexbuffer:
-    ltitle.pop(i)
-    ldate.pop(i)
+    # open db and compare and the update
+    sqlc = sqlite3.connect("igniics.db")
+    crsr = sqlc.cursor()
+    print(newuid)
 
+    for i, val in enumerate(newuid[0]):
+        crsr.execute('UPDATE eventstable SET uuid = "{newuid[3][i]}" WHERE\
+            eventname = "{val}" AND eventtime = "{newuid[1][i]}" AND uuid = ""')
 
-with open(".config/igni-ical/igni.ics", "w", newline='') as f:
-    for i in range(len(ltitle)):
-        e.append(Event())
-        e[i].name = ltitle[i]
-        if ldate[i].strftime("%H%M") == "0000":
-            ldate[i] = ldate[i].replace(day=ldate[i].day+1)
-            e[i].begin = ldate[i].isoformat()
-            e[i].make_all_day()
-        else:
-            e[i].begin = ldate[i].isoformat()
-            e[i].duration = delta
-        c.events.add(e[i])
-    f.writelines(c.serialize_iter())
-"""
-    die lcal so herrichten, dass sie auch als events + uid eingespielt werden
-    können
-"""
+    # save and close connection
+    sqlc.commit()
+    sqlc.close()
+
+    return
+
 
 # funktioniert dann überlegen ob ich das irgendwie automatisch machen kann mit
 # hochladen in einen kalender... oder das skript irgendwo laufen lassen kann.
