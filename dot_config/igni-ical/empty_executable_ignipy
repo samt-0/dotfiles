@@ -69,6 +69,7 @@ def compareadddb():
     lcal[1] = crsr.fetchall()
     crsr.execute("SELECT uuid FROM eventstable")
     lcal[2] = crsr.fetchall()
+    print(lcal)
     
     # save and close connection
     sqlc.commit()
