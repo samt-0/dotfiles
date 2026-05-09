@@ -39,6 +39,7 @@ for i in range(len(ltitle)):
     resultj, resultk = list(), list()
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
+            print(i)
             if tupword.find(ltitle[i]) > -1:
                 resultj.append(j)
                 resultk.append(k)
