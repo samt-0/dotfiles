@@ -40,9 +40,11 @@ def compareadddb():
         uuid text);")
     
     # get the eventnames and times
-    crsr.execute("SELECT eventname, eventtime FROM eventstable")
-    ans = crsr.fetchall()
-    print(ans)
+    ans = [[], []]
+    crsr.execute("SELECT eventname FROM eventstable")
+    ans[0].append(crsr.fetchall())
+    crsr.execute("SELECT eventtime FROM eventstable")
+    ans[1].append(crsr.fetchall())
 
     # compare the names and times
     popbuffer = list()
