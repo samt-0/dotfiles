@@ -46,9 +46,7 @@ for i in range(len(ltitle)):
         for g in range(len(resultj)):
             bufdate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
             compdate = datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz)
-            print(ldate[i], compdate)
             if ldate[i] == compdate:
-                print("y")
                 ltitle.pop(i)
                 ldate.pop(i)
                 break
