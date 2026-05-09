@@ -4,20 +4,47 @@ import datetime, pytz, sqlite3
 from ics import Calendar, Event
 
 
-c = Calendar()
-delta = {"hours":2}
-tz = pytz.timezone("Europe/Vienna")
-ltitle, ldate, e, lcal = [], [], [], []
+def main():
+    c = Calendar()
+    delta = {"hours":2}
+    tz = pytz.timezone("Europe/Vienna")
+    ltitle, ldate, e, lcal = [], [], [], []
+    readptext()
+    compareadddb()
+    makeics()
 
 
-with open(".config/igni-ical/plaintext", "r") as f:
-    f = f.readlines()
-    for i in range(len(f)):
-        if i % 2:
-            date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
-            ldate.append(date_obj)
-        else:
-           ltitle.append(f[i].strip())
+def readptext():
+
+    with open(".config/igni-ical/plaintext", "r") as f:
+        f = f.readlines()
+        for i in range(len(f)):
+            if i % 2:
+                date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
+                ldate.append(date_obj)
+            else:
+               ltitle.append(f[i].strip())
+
+
+def compareadddb():
+    sqlc = sqlit3.connect("igniics.db")
+    crsr = sqlc.cursor()
+
+CREATE TABLE IF NOT EXISTS eventstable (
+    uid integer auto_increment primary key,
+    eventname text not null,
+    eventtime text not null
+);
+
+
+    sqlc.commit()
+    sqlc.close()
+
+
+def makeics():
+
+
+
 
 
 with open(".config/igni-ical/igni.ics", "r", newline='') as f:
@@ -82,3 +109,4 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
 
 # funktioniert dann überlegen ob ich das irgendwie automatisch machen kann mit
 # hochladen in einen kalender... oder das skript irgendwo laufen lassen kann.
+main()
