@@ -59,8 +59,8 @@ for i in indexbuffer:
     ltitle.pop(i)
     ldate.pop(i)
 
+print()
 print(ltitle)
-print(lcal)
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
