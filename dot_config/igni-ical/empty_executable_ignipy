@@ -56,6 +56,7 @@ indexbuffer.reverse()
 print(indexbuffer)
 print(ltitle)
 for i in indexbuffer:
+    print(i)
     ltitle.pop(i)
     ldate.pop(i)
 
