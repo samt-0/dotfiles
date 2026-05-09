@@ -44,7 +44,8 @@ for i in range(len(ltitle)):
                 resultj.append(j)
                 resultk.append(k)
             if tupword.find("SUMMARY") > -1:
-                lcal[j][k]
+                lcal[j][k].strip().replace("SUMMARY:", "")
+                print(lcal[j][k])
 
     if resultj:
         for g in range(len(resultj)):
