@@ -6,7 +6,7 @@ from ics import Calendar, Event
 c = Calendar()
 delta = {"hours":2}
 tz = pytz.timezone("Europe/Vienna")
-newevents, e, lcal = [], [], []
+newevents, e, lcal = [[], []], [], [[], [], []]
 
 def main():
     readptext()
