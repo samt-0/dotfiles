@@ -39,16 +39,17 @@ indexbuffer = list()
 for i in range(len(ltitle)):
     resultj, resultk = list(), list()
     for j, word in enumerate(lcal):
-        print(word)
         for k, tupword in enumerate(lcal[j]):
             if tupword.find(ltitle[i]) > -1:
                 resultj.append(j)
                 resultk.append(k)
+            if tupword.find("SUMMARY") > -1:
+
     if resultj:
         for g in range(len(resultj)):
             bufdate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
-            compdate = datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz)
-            if ldate[i] == compdate:
+            lcal[resultj[g]][int(resultk[g])-1] = datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz)
+            if ldate[i] == lcal[resultj[g]][int(resultk[g])-1]:
                 indexbuffer.append(i)
                 break
 
@@ -57,7 +58,6 @@ for i in indexbuffer:
     ltitle.pop(i)
     ldate.pop(i)
 
-print(lcal)
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
