@@ -71,7 +71,6 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     die lcal so herrichten, dass sie auch als events + uid eingespielt werden
     können
 """
-
     f.writelines(c.serialize_iter())
 
 # funktioniert dann überlegen ob ich das irgendwie automatisch machen kann mit
