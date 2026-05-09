@@ -29,7 +29,7 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                 in f[i]):
             if "END:VEVENT" in f[i]:
                 lbuffer.append(f[i])
-                lcal.append(tuple(lbuffer))
+                lcal.append(list(lbuffer))
                 lbuffer.clear()
             else:
                 lbuffer.append(f[i])
