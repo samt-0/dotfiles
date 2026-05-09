@@ -29,7 +29,7 @@ def readptext():
 
 def compareadddb():
     # open connection
-    sqlc = sqlite3.connect("igniics.db")
+    sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
     crsr = sqlc.cursor()
 
     # create table if not already existing
@@ -125,7 +125,7 @@ def makeics():
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
 
     # open db and compare and the update
-    sqlc = sqlite3.connect("igniics.db")
+    sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
     crsr = sqlc.cursor()
     print(newuid)
 
