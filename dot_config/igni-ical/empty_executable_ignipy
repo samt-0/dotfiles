@@ -36,6 +36,7 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                     
 
 indexbuffer = list()
+print(lcal)
 for i in range(len(ltitle)):
     resultj, resultk = list(), list()
     for j, word in enumerate(lcal):
