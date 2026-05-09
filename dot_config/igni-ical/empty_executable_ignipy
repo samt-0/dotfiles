@@ -66,9 +66,6 @@ with open(".config/igni-ical/igni.ics", "w", newline='') as f:
         else:
             e[i].begin = ldate[i].isoformat()
             e[i].duration = delta
-    for i in range(len(lcal)):
-
-
         c.events.add(e[i])
 """
     die lcal so herrichten, dass sie auch als events + uid eingespielt werden
