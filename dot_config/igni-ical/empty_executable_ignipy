@@ -33,11 +33,11 @@ def compareadddb():
     crsr = sqlc.cursor()
 
     # create table if not already existing
-    crsr.execute('CREATE TABLE IF NOT EXISTS eventstable (
-        id integer auto_increment primary key,
-        eventname text not null,
-        eventtime text not null,
-        uuid text);')
+    crsr.execute("""CREATE TABLE IF NOT EXISTS eventstable (\
+        id integer auto_increment primary key,\
+        eventname text not null,\
+        eventtime text not null,\
+        uuid text);""")
     
     # get the eventnames and times
     ans = [[], []]
