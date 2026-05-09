@@ -51,17 +51,12 @@ for i in range(len(ltitle)):
                 indexbuffer.append(i)
                 break
 
-print(indexbuffer)
 indexbuffer.reverse()
-print(indexbuffer)
-print(ltitle)
 for i in indexbuffer:
-    print(i)
     ltitle.pop(i)
     ldate.pop(i)
 
-print()
-print(ltitle)
+print(lcal)
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
     for i in range(len(ltitle)):
