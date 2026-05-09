@@ -93,7 +93,7 @@ def makeics():
 
     # reading the new ics file
     fuid = list()
-    newuid = ["", "", ""]
+    newuid = list()
     with open(".config/igni-ical/igni.ics", "r", newline='') as f:
         f = f.readlines()
         lbuffer = list()
