@@ -35,11 +35,11 @@ with open(".config/igni-ical/igni.ics", "r", newline='') as f:
                 lbuffer.append(f[i])
                     
 
+indexbuffer = list()
 for i in range(len(ltitle)):
     resultj, resultk = list(), list()
     for j, word in enumerate(lcal):
         for k, tupword in enumerate(lcal[j]):
-            print(i, len(ltitle))
             if tupword.find(ltitle[i]) > -1:
                 resultj.append(j)
                 resultk.append(k)
@@ -48,10 +48,18 @@ for i in range(len(ltitle)):
             bufdate = lcal[resultj[g]][int(resultk[g])-1].strip().split(":")
             compdate = datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz)
             if ldate[i] == compdate:
-                ltitle.pop(i)
-                ldate.pop(i)
+                indexbuffer.append(i)
                 break
 
+print(indexbuffer)
+indexbuffer.reverse()
+print(indexbuffer)
+print(ltitle)
+for i in indexbuffer:
+    ltitle.pop(i)
+    ldate.pop(i)
+
+print(ltitle)
 print(lcal)
 
 with open(".config/igni-ical/igni.ics", "w", newline='') as f:
