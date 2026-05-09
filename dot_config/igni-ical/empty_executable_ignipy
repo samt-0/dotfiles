@@ -39,6 +39,7 @@ indexbuffer = list()
 for i in range(len(ltitle)):
     resultj, resultk = list(), list()
     for j, word in enumerate(lcal):
+        print(word)
         for k, tupword in enumerate(lcal[j]):
             if tupword.find(ltitle[i]) > -1:
                 resultj.append(j)
