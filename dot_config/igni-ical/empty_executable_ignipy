@@ -118,12 +118,9 @@ def makeics():
             if "SUMMARY" in field:
                 field = field.strip().split(":", 1)
                 newuid[0].append(field[1])
-                print(field[1], fuid[i][j+1])
                 b = fuid[i][j+1].strip().split(":", 1)
-                print(b[1])
                 newuid[2].append(b[1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
-                print(bufdate[1])
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
 
     # open db and compare and the update
