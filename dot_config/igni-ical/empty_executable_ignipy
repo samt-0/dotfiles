@@ -69,7 +69,6 @@ def compareadddb():
     lcal[1] = crsr.fetchall()
     crsr.execute("SELECT uuid FROM eventstable")
     lcal[2] = crsr.fetchall()
-    print(lcal)
     
     # save and close connection
     sqlc.commit()
@@ -114,6 +113,7 @@ def makeics():
                     lbuffer.append(f[i])
 
     # string manipulation to save in a usable and comparable format
+    print(fuid)
     for i, val in enumerate(fuid):
         for j, field in enumerate(val):
             if field.find("SUMMARY"):
@@ -129,7 +129,7 @@ def makeics():
     # open db and compare and the update
     sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
     crsr = sqlc.cursor()
-    print(newuid)
+    #print(newuid)
 
     for i, val in enumerate(newuid[0]):
         crsr.execute("""UPDATE eventstable SET uuid = "{newuid[3][i]}" WHERE\
