@@ -82,15 +82,15 @@ def makeics():
     with open(".config/igni-ical/igni.ics", "w", newline='') as f:
         for i in range(len(lcal[0])):
             e.append(Event())
-            e[i].name = lcal[0][i]
+            e[i].name = str(lcal[0][i])
             print(lcal[1][i], lcal[0][i], lcal[2][i])
             if "00:00:00" in lcal[1][i]:
                 print("y")
-                lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
-                e[i].begin = lcal[1][i]
+                #lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
+                e[i].begin = str(lcal[1][i])
                 e[i].make_all_day()
             else:
-                e[i].begin = lcal[1][i]
+                e[i].begin = str(lcal[1][i])
                 e[i].duration = delta
             #if lcal[2][i] != "":
                 #e[i].uid = lcal[2][i]
