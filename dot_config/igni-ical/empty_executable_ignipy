@@ -119,9 +119,11 @@ def makeics():
                 field = field.strip().split(":", 1)
                 newuid[0].append(field[1])
                 print(field[1], fuid[i][j+1])
-                fuid[i][j+1].strip().split(":", 1)
-                newuid[2].append(fuid[i][j+1][1])
+                b = fuid[i][j+1].strip().split(":", 1)
+                print(b)
+                newuid[2].append(b[1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
+                print(bufdate)
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
 
     # open db and compare and the update
