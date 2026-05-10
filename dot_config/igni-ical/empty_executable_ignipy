@@ -114,9 +114,9 @@ def makeics():
 
     # string manipulation to save in a usable and comparable format
     for i, val in enumerate(fuid):
-        print(val)
         for j, field in enumerate(val):
             if "SUMMARY" in field:
+                print(field)
                 field.strip().split(":", 1)
                 newuid[0].append(field[1])
                 fuid[i][j+1].strip().split(":", 1)
