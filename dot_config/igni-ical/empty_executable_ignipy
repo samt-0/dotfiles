@@ -93,8 +93,8 @@ def makeics():
             else:
                 e[i].begin = lcal[1][i][0]
                 e[i].duration = delta
-            #if type(lcal[2][i][0]) != "NoneType":
-                #e[i].uid = lcal[2][i][0]
+            if type(lcal[2][i][0]) != "NoneType":
+                e[i].uid = lcal[2][i][0]
             c.events.add(e[i])
         f.writelines(c.serialize_iter())
 
