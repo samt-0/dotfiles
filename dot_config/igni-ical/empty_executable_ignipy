@@ -126,7 +126,7 @@ def makeics():
     # open db and compare and the update
     sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
     crsr = sqlc.cursor()
-    #print(newuid)
+    print(newuid)
 
     for i, val in enumerate(newuid[0]):
         print(val, newuid[1][i], newuid[2][i])
