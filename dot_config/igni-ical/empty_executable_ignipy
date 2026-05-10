@@ -83,7 +83,7 @@ def makeics():
             e.append(Event())
             e[i].name = lcal[0][i][0]
             print(lcal[1][i][0])
-            if "00:00:00" in lcal[1][i]:
+            if "00:00:00" in lcal[1][i][0]:
                 print("y")
                 #lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
                 e[i].begin = lcal[1][i][0]
