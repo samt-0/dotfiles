@@ -64,11 +64,11 @@ def compareadddb():
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
             (?, ?)""", (newevents[0][i], newevents[1][i]))
     crsr.execute("SELECT eventname FROM eventstable")
-    lcal[0] = crsr.fetchall()
+    lcal[0] = list(crsr.fetchall())
     crsr.execute("SELECT eventtime FROM eventstable")
-    lcal[1] = crsr.fetchall()
+    lcal[1] = list(crsr.fetchall())
     crsr.execute("SELECT uuid FROM eventstable")
-    lcal[2] = crsr.fetchall()
+    lcal[2] = list(crsr.fetchall())
     print(lcal)
     
     # save and close connection
