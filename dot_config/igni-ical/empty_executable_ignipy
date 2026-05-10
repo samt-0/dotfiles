@@ -113,17 +113,14 @@ def makeics():
                     lbuffer.append(f[i])
 
     # string manipulation to save in a usable and comparable format
-    print(fuid)
     for i, val in enumerate(fuid):
         for j, field in enumerate(val):
             if "SUMMARY" in field:
-                print(field, fuid[i][j+1], fuid[i][j-1])
                 field.strip().split(":", 1)
                 newuid[0].append(field[1])
                 fuid[i][j+1].strip().split(":", 1)
                 newuid[2].append(fuid[i][j+1][1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
-                print(bufdate, bufdate[1])
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
 
     # open db and compare and the update
