@@ -84,7 +84,7 @@ def makeics():
             e.append(Event())
             e[i].name = lcal[0][i]
             print(lcal[1][i])
-            if lcal[1][i].strftime("%H%M") == "0000":
+            if lcal[1][i].find("00:00:00") > -1:
                 lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
                 e[i].begin = lcal[1][i].isoformat()
                 e[i].make_all_day()
