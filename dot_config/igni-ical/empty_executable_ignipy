@@ -116,7 +116,7 @@ def makeics():
     print(fuid)
     for i, val in enumerate(fuid):
         for j, field in enumerate(val):
-            if field.find("SUMMARY"):
+            if "SUMMARY" in field:
                 print(field, fuid[i][j+1], fuid[i][j-1])
                 field.strip().split(":", 1)
                 newuid[0].append(field[1])
