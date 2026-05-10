@@ -64,11 +64,11 @@ def compareadddb():
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
             (?, ?)""", (newevents[0][i], newevents[1][i]))
     crsr.execute("SELECT eventname FROM eventstable")
-    lcal[0] = list(crsr.fetchall())
+    lcal[0] = crsr.fetchall()
     crsr.execute("SELECT eventtime FROM eventstable")
-    lcal[1] = list(crsr.fetchall())
+    lcal[1] = crsr.fetchall()
     crsr.execute("SELECT uuid FROM eventstable")
-    lcal[2] = list(crsr.fetchall())
+    lcal[2] = crsr.fetchall()
     print(lcal)
     
     # save and close connection
@@ -84,7 +84,8 @@ def makeics():
             e.append(Event())
             e[i].name = lcal[0][i]
             print(lcal[1][i])
-            if lcal[1][i].find("00:00:00") > -1:
+            if "00:00:00" in lcal[1][i]:
+                print("y")
                 lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
                 e[i].begin = lcal[1][i].isoformat()
                 e[i].make_all_day()
