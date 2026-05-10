@@ -94,7 +94,6 @@ def makeics():
                 e[i].duration = delta
             if lcal[2][i] != "":
                 e[i].uid = lcal[2][i]
-            print(e[i])
             c.events.add(e[i])
         f.writelines(c.serialize_iter())
 
