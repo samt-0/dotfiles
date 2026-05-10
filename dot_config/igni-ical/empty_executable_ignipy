@@ -117,8 +117,8 @@ def makeics():
         for j, field in enumerate(val):
             if "SUMMARY" in field:
                 field = field.strip().split(":", 1)
-                print(field)
                 newuid[0].append(field[1])
+                print(field[1], fuid[i][j+1])
                 fuid[i][j+1].strip().split(":", 1)
                 newuid[2].append(fuid[i][j+1][1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
