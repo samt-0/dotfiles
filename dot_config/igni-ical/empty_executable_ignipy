@@ -87,10 +87,10 @@ def makeics():
             if "00:00:00" in lcal[1][i]:
                 print("y")
                 lcal[1][i] = lcal[1][i].replace(day=lcal[1][i].day+1)
-                e[i].begin = lcal[1][i].isoformat()
+                e[i].begin = lcal[1][i]
                 e[i].make_all_day()
             else:
-                e[i].begin = lcal[1][i].isoformat()
+                e[i].begin = lcal[1][i]
                 e[i].duration = delta
             if lcal[2][i]:
                 e[i].uid = lcal[2][i]
