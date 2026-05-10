@@ -132,9 +132,9 @@ def makeics():
     #print(newuid)
 
     for i, val in enumerate(newuid[0]):
-        crsr.execute("""UPDATE eventstable SET uuid = "{newuid[3][i]}" WHERE\
-            eventname = "{val}" AND eventtime = "{newuid[1][i]}" AND uuid =\
-            """"")
+        crsr.execute("""UPDATE eventstable SET uuid = "?" WHERE\
+            eventname = "?" AND eventtime = "?" AND uuid =\
+            """"", (newuid[3][i], val, newuid[1][i]))
 
     # save and close connection
     sqlc.commit()
