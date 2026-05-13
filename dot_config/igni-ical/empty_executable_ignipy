@@ -58,11 +58,9 @@ def compareadddb():
     popbuffer = list(popbuffer)
     popbuffer.reverse()
     for i in popbuffer:
-        print(i)
         newevents[0].pop(i)
         newevents[1].pop(i)
 
-    print(newevents)
     # save updated names, uid, and times as lists and return them
     for i in range(len(newevents[0])):
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
