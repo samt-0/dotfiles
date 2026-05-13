@@ -50,8 +50,8 @@ def compareadddb():
     popbuffer = list()
     for i, val in enumerate(newevents[0]):
         for j in ans[0][0]:
-            print(j)
-            if (val == j) and (newevents[1][i] == ans[1][j]):
+            print(j[0])
+            if (val == j[0]) and (newevents[1][i] == ans[1][0][j][0]):
                 popbuffer.append(i)
 
     # pop the already existing ones from the list/add the new ones to the db
