@@ -57,6 +57,7 @@ def compareadddb():
     popbuffer.reverse()
     print(popbuffer)
     for i in popbuffer:
+        print(i)
         newevents[0].pop(i)
         newevents[1].pop(i)
 
