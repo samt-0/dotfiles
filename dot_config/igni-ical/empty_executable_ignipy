@@ -84,7 +84,10 @@ def makeics():
             e[i].name = lcal[0][i][0]
             if "00:00:00" in lcal[1][i][0]:
                 p = lcal[1][i][0]                
-                # make p an int and change increase the day by one
+                print(p)
+                p = p.datetime.fromisoformat(p)
+                print(p)
+                p = p.replace(day=p.day+1)
                 print(p)
                 e[i].begin = p
                 e[i].make_all_day()
