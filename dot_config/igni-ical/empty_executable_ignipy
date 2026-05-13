@@ -124,7 +124,6 @@ def makeics():
                 newuid[2].append(b[1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz).isoformat())
-    print(newuid[0], newuid[1], newuid[2])
 
     # open db and compare and the update
     sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
@@ -133,8 +132,8 @@ def makeics():
     for i, val in enumerate(newuid[0]):
         print(val, newuid[1][i], newuid[2][i])
         crsr.execute("""UPDATE eventstable SET uuid = ? WHERE\
-            eventname = ? AND eventtime = ? AND uuid =\
-            ''""", (newuid[2][i], val, newuid[1][i]))
+            eventname = ? AND eventtime = ? AND uuid = ''\
+            """, (newuid[2][i], val, newuid[1][i]))
 
     # save and close connection
     sqlc.commit()
