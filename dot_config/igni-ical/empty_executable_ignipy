@@ -67,7 +67,6 @@ def compareadddb():
 
     # save updated names, uid, and times as lists and return them
     for i in range(len(newevents[0])):
-        print(newevents[0][i], newevents[1][i])
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
             (?, ?)""", (newevents[0][i], newevents[1][i]))
     crsr.execute("SELECT eventname FROM eventstable")
@@ -141,9 +140,6 @@ def makeics():
             eventname = ? AND eventtime = ?\
             """, (newuid[2][i], val, newuid[1][i]))
 
-    crsr.execute("SELECT * FROM eventstable")
-    test = crsr.fetchall()
-    print(test)
     # save and close connection
     sqlc.commit()
     sqlc.close()
