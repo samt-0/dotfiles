@@ -123,7 +123,7 @@ def makeics():
                 b = fuid[i][j+1].strip().split(":", 1)
                 newuid[2].append(b[1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
-                newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
+                newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz).isoformat())
     print(newuid[0], newuid[1], newuid[2])
 
     # open db and compare and the update
