@@ -92,9 +92,7 @@ def makeics():
             else:
                 e[i].begin = lcal[1][i][0]
                 e[i].duration = delta
-            print(lcal[2][i][0], type(lcal[2][i][0]))
             if type(lcal[2][i][0]) is str:
-                print("y", lcal[2][i][0])
                 e[i].uid = lcal[2][i][0]
             c.events.add(e[i])
         f.writelines(c.serialize_iter())
