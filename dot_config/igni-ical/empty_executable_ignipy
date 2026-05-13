@@ -25,6 +25,7 @@ def readptext():
                 newevents[1].append(date_obj)
             else:
                newevents[0].append(f[i].strip())
+        print(newevents[1])
 
     return
 
