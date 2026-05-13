@@ -134,7 +134,7 @@ def makeics():
             eventname = ? AND eventtime = ? AND uuid = ''\
             """, (newuid[2][i], val, newuid[1][i]))
 
-    crsr.execute("SELECT * FROM eventstable")
+    crsr.execute("SELECT uuid FROM eventstable")
     test = crsr.fetchall()
     print(test)
     # save and close connection
