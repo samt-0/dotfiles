@@ -36,8 +36,7 @@ def compareadddb():
     crsr.execute("""CREATE TABLE IF NOT EXISTS eventstable (\
         eventname text not null,\
         eventtime text not null,\
-        uuid text,
-        PRIMARY KEY (eventname, eventtime));""")
+        uuid text));""")
     
     # get the eventnames and times
     ans = [[], []]
