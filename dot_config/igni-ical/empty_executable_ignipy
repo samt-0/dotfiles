@@ -19,13 +19,10 @@ def readptext():
         f = f.readlines()
         for i in range(len(f)):
             if i % 2:
-                print(f[i])
                 date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
-                print(date_obj)
                 newevents[1].append(date_obj.isoformat())
             else:
                newevents[0].append(f[i].strip())
-        print(newevents[1])
 
     return
 
@@ -62,6 +59,7 @@ def compareadddb():
         newevents[0].pop(i)
         newevents[1].pop(i)
 
+    print(newevents)
     # save updated names, uid, and times as lists and return them
     for i in range(len(newevents[0])):
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
