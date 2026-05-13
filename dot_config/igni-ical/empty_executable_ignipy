@@ -55,7 +55,7 @@ def compareadddb():
                 popbuffer.add(i)
 
     # pop the already existing ones from the list/add the new ones to the db
-    popbuffer = list(popbuffer).reverse()
+    popbuffer = list(popbuffer)
     for i in popbuffer:
         print(i)
         newevents[0].pop(i)
