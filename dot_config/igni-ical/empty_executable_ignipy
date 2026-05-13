@@ -19,6 +19,7 @@ def readptext():
         f = f.readlines()
         for i in range(len(f)):
             if i % 2:
+                print(f[i])
                 date_obj = datetime.datetime.strptime(f[i].strip(), "%d.%m.%Y %H:%M").astimezone(tz)
                 newevents[1].append(date_obj)
             else:
