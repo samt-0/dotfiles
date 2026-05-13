@@ -46,7 +46,7 @@ def compareadddb():
     crsr.execute("SELECT eventtime FROM eventstable")
     ans[1].append(crsr.fetchall())
 
-    print(enumerate(ans))
+    print(enumerate(newevents[0]))
     # compare the names and times
     popbuffer = list()
     for i, val in enumerate(newevents[0]):
