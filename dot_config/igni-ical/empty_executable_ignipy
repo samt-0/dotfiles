@@ -130,12 +130,12 @@ def makeics():
                 bufdate = fuid[i][j-1].strip().split(":", 1)
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz).isoformat())
 
+    print(newuid)
     # open db and compare and the update
     sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
     crsr = sqlc.cursor()
 
     for i, val in enumerate(newuid[0]):
-        # update funktioniert nicht. es werden keien uuids gespeichert
         crsr.execute("""UPDATE eventstable SET uuid = ? WHERE\
             eventname = ? AND eventtime = ?\
             """, (newuid[2][i], val, newuid[1][i]))
