@@ -51,7 +51,7 @@ def compareadddb():
         for x, j in enumerate(ans[0][0]):
             if (val == j[0]) and (newevents[1][i] == ans[1][0][x][0]):
                 popbuffer.add(i)
-        for t in range(len(newevents[0])):
+        for t in range(len(newevents[0][i:])):
             if (i != t) and (newevents[0][i] == newevents[0][t]) and (newevents[1][i] ==\
                                                          newevents[1][t]):
                 popbuffer.add(i)
