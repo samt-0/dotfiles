@@ -132,7 +132,7 @@ def makeics():
     for i, val in enumerate(newuid[0]):
         # update funktioniert nicht. es werden keien uuids gespeichert
         crsr.execute("""UPDATE eventstable SET uuid = ? WHERE\
-            eventname = ? AND eventtime = ?\
+            eventname = ? AND eventtime = ? AND uuid = "None"\
             """, (newuid[2][i], val, newuid[1][i]))
 
     crsr.execute("SELECT uuid FROM eventstable")
