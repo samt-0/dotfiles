@@ -93,6 +93,7 @@ def makeics():
                 e[i].begin = lcal[1][i][0]
                 e[i].duration = delta
             if type(lcal[2][i][0]) == "str":
+                print("y", lcal[2][i][0])
                 e[i].uid = lcal[2][i][0]
             c.events.add(e[i])
         f.writelines(c.serialize_iter())
@@ -135,7 +136,7 @@ def makeics():
             eventname = ? AND eventtime = ?\
             """, (newuid[2][i], val, newuid[1][i]))
 
-    crsr.execute("SELECT uuid FROM eventstable")
+    crsr.execute("SELECT * FROM eventstable")
     test = crsr.fetchall()
     print(test)
     # save and close connection
