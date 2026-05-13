@@ -47,16 +47,13 @@ def compareadddb():
 
     # compare the names and times
     popbuffer = set()
-    print(len(newevents[0]))
     for i, val in enumerate(newevents[0]):
         for x, j in enumerate(ans[0][0]):
             if (val == j[0]) and (newevents[1][i] == ans[1][0][x][0]):
                 popbuffer.add(i)
         for t in range(len(newevents[0][:i]), len(newevents[0])):
-            print(i, t)
             if (i != t) and (newevents[0][i] == newevents[0][t]) and (newevents[1][i] ==\
                                                          newevents[1][t]):
-                print(newevents[0][i], i, t)
                 popbuffer.add(i)
 
 
@@ -69,7 +66,6 @@ def compareadddb():
 
     # save updated names, uid, and times as lists and return them
     for i in range(len(newevents[0])):
-        print(f"Something was inserted {i}")
         crsr.execute("""INSERT INTO eventstable (eventname, eventtime) VALUES\
             (?, ?)""", (newevents[0][i], newevents[1][i]))
     crsr.execute("SELECT eventname FROM eventstable")
