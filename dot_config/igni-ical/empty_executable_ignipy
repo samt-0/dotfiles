@@ -113,7 +113,6 @@ def makeics():
                     lbuffer.clear()
                 else:
                     lbuffer.append(f[i])
-    print(fuid)
 
     # string manipulation to save in a usable and comparable format
     for i, val in enumerate(fuid):
@@ -125,6 +124,7 @@ def makeics():
                 newuid[2].append(b[1])
                 bufdate = fuid[i][j-1].strip().split(":", 1)
                 newuid[1].append(datetime.datetime.fromisoformat(bufdate[1]).astimezone(tz))
+    print(newuid[0], newuid[1], newuid[2])
 
     # open db and compare and the update
     sqlc = sqlite3.connect(".config/igni-ical/igniics.db")
