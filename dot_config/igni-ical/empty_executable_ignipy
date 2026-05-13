@@ -49,8 +49,8 @@ def compareadddb():
     # compare the names and times
     popbuffer = list()
     for i, val in enumerate(newevents[0]):
-        for j in ans[0][0]:
-            print(newevents[1][i], ans[1][0][j])
+        for x, j in enumerate(ans[0][0]):
+            print(newevents[1][i], ans[1][0][x])
             if (val == j[0]) and (newevents[1][i] == ans[1][0]):
                 print("y")
                 popbuffer.append(i)
