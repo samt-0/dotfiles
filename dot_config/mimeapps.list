@@ -5,6 +5,7 @@ image/png=vimiv.desktop
 application/json=nvim.desktop
 application/pdf=librewolf.desktop
 video/webm=vlc.desktop
+x-scheme-handler/*=librewolf.desktop
 
 [Added Associations]
 font/ttf=nvim.desktop;
