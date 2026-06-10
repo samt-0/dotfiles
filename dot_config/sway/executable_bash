@@ -1,3 +1,0 @@
-!#/bin/bash
-
-swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper -C ~/.cache/wal/swaylock.conf & systemctl hybrid-sleep
