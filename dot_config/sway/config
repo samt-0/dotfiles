@@ -99,7 +99,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    bindsym $mod+Shift+p exec swaylock --hide-keyboard-layout -i /home/thas/wallpaper/wallpaper -C ~/.cache/wal/swaylock.conf & systemctl hybrid-sleep
+    bindsym $mod+Shift+p exec $lock & systemctl hybrid-sleep
     bindsym $mod+p exec $lock
     bindsym $mod+Shift+Ctrl+p exec shutdown now
     
