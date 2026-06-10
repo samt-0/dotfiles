@@ -99,9 +99,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+p exec $lock && systemctl hybrid-sleep
-
+    bindsym $mod+Shift+p exec ./~/.config/sway/bash
     bindsym $mod+p exec $lock
     bindsym $mod+Shift+Ctrl+p exec shutdown now
     
