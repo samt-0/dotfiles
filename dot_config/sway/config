@@ -14,6 +14,10 @@
 #    pointer_accel 0.2
 #}
 
+input "1133:16429:Logitech_Wireless_Mouse_M560" {
+    scroll_factor 1.2
+}
+
 input * {
 	xkb_layout "de"
 }
