@@ -15,7 +15,7 @@
 #}
 
 input "1133:16429:Logitech_Wireless_Mouse_M560" {
-    scroll_factor 3.5
+    scroll_factor 2
 }
 
 input * {
