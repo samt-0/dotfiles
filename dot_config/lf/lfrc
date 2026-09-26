@@ -145,7 +145,7 @@ map DR restore_trash
 # map de $trashy empty --all
 map p paste
 map x cut
-map y copy
+map y copy -r
 map <enter> open
 map R reload
 map mf mkfile
