@@ -10,5 +10,5 @@ if [ -e "/home/$USER/backup/backup.tar.gz" ] && [ -e "/home/$USER/backup/differe
 then
     cp /home/$USER/backup/differential.snar /home/$USER/backup/${snarname} && sudo tar -cvvpzf /home/$USER/backup/${buname} -g /home/$USER/backup/${snarname} --exclude=.* --exclude="backup" /home/ && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/${snarname} && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/${buname}
 else
-    sudo tar -cvvpzf /home/$USER/backup/backup.tar.gz -g /home/$USER/backup/differential.snar --exclude=.* --exclude="backup" /home/ && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/differential.snar && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/backup.tar.gz
+    sudo mkdir /home/$USER/backup && sudo tar -cvvpzf /home/$USER/backup/backup.tar.gz -g /home/$USER/backup/differential.snar --exclude=.* --exclude="backup" /home/ && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/differential.snar && gpg -e -r samuel.thurner@proton.me /home/$USER/backup/backup.tar.gz
 fi
