@@ -6,6 +6,7 @@ application/json=nvim.desktop
 application/pdf=librewolf.desktop
 video/webm=vlc.desktop
 x-scheme-handler/*=librewolf.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
 
 [Added Associations]
 font/ttf=nvim.desktop;
