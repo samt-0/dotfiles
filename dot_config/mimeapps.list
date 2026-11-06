@@ -6,7 +6,10 @@ application/json=nvim.desktop
 application/pdf=librewolf.desktop
 video/webm=vlc.desktop
 x-scheme-handler/*=librewolf.desktop
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+x-scheme-handler/sgnl=signal.desktop
+x-scheme-handler/signalcaptcha=signal.desktop
 
 [Added Associations]
 font/ttf=nvim.desktop;
+x-scheme-handler/sgnl=signal.desktop;
+x-scheme-handler/signalcaptcha=signal.desktop;
